@@ -92,18 +92,16 @@ export default async function handler(req, res) {
   ].filter(Boolean).join('\n');
 
   const htmlBody = `
-    <div style="font-family:Arial,Helvetica,sans-serif;color:#111;max-width:560px">
-      <h2 style="color:#e30613;margin:0 0 1rem">New quote request from ikad.ca</h2>
-      <table style="border-collapse:collapse;width:100%;font-size:14px">
-        <tr><td style="padding:6px 8px;background:#f6f7f9;width:120px"><strong>Name</strong></td><td style="padding:6px 8px">${escapeHtml(name)}</td></tr>
-        <tr><td style="padding:6px 8px;background:#f6f7f9"><strong>Phone</strong></td><td style="padding:6px 8px"><a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></td></tr>
-        <tr><td style="padding:6px 8px;background:#f6f7f9"><strong>Email</strong></td><td style="padding:6px 8px"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
-        <tr><td style="padding:6px 8px;background:#f6f7f9"><strong>City</strong></td><td style="padding:6px 8px">${escapeHtml(city) || '<em>not given</em>'}</td></tr>
-        <tr><td style="padding:6px 8px;background:#f6f7f9"><strong>Service</strong></td><td style="padding:6px 8px">${escapeHtml(service) || '<em>not given</em>'}</td></tr>
-        ${sourcePage ? `<tr><td style="padding:6px 8px;background:#f6f7f9"><strong>Page</strong></td><td style="padding:6px 8px">${escapeHtml(sourcePage)}</td></tr>` : ''}
-      </table>
-      ${message ? `<p style="margin-top:1rem"><strong>Message:</strong></p><p style="background:#f6f7f9;padding:1rem;border-left:3px solid #e30613;white-space:pre-wrap">${escapeHtml(message)}</p>` : ''}
-      <p style="color:#64748b;font-size:12px;margin-top:2rem">Submitted via the IKAD Mechanical website quote form.</p>
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111;line-height:1.5">
+      <p>New quote request from ikad.ca:</p>
+      <p>
+        <strong>Name:</strong> ${escapeHtml(name)}<br>
+        <strong>Phone:</strong> ${escapeHtml(phone)}<br>
+        <strong>Email:</strong> ${escapeHtml(email)}<br>
+        <strong>City:</strong> ${escapeHtml(city) || '(not given)'}<br>
+        <strong>Service:</strong> ${escapeHtml(service) || '(not given)'}${sourcePage ? `<br><strong>Page:</strong> ${escapeHtml(sourcePage)}` : ''}
+      </p>
+      ${message ? `<p><strong>Message:</strong><br>${escapeHtml(message).replace(/\n/g, '<br>')}</p>` : ''}
     </div>
   `;
 
