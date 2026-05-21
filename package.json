@@ -11,7 +11,7 @@
     "nodemailer": "^6.9.16"
   },
   "scripts": {
-    "build": "python _build/generate_pages.py",
+    "generate": "python _build/generate_pages.py",
     "dev": "python -m http.server 8765"
   }
 }
