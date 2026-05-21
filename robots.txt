@@ -1,0 +1,150 @@
+# robots.txt for IKAD Mechanical Inc.
+# Site: https://ikad.ca/
+# Last updated: 2026-05-21
+
+# ---------------------------------------------------------------
+# Default crawl policy
+# ---------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /temp-extract/
+Disallow: /api/
+
+# ---------------------------------------------------------------
+# Major search engine crawlers (explicitly allowed)
+# ---------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ---------------------------------------------------------------
+# AI / LLM training and search crawlers (explicitly allowed)
+# IKAD welcomes AI engines citing our content with attribution.
+# ---------------------------------------------------------------
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google Gemini / AI Overviews
+User-agent: Google-Extended
+Allow: /
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# ByteDance / TikTok / Doubao
+User-agent: Bytespider
+Allow: /
+
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by many AI datasets)
+User-agent: CCBot
+Allow: /
+
+# Meta AI / Llama
+User-agent: meta-externalagent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Amazon Alexa / Rufus
+User-agent: Amazonbot
+Allow: /
+
+# Other AI search and research crawlers
+User-agent: PetalBot
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: ImagesiftBot
+Allow: /
+User-agent: Timpibot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: NeevaBot
+Allow: /
+User-agent: Brave-Bot
+Allow: /
+User-agent: Mistral-AI
+Allow: /
+User-agent: AI2Bot
+Allow: /
+User-agent: omgili
+Allow: /
+User-agent: omgilibot
+Allow: /
+
+# ---------------------------------------------------------------
+# Aggressive backlink scrapers (disallowed to protect link profile)
+# ---------------------------------------------------------------
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ---------------------------------------------------------------
+# Sitemaps and machine-readable manifests
+# ---------------------------------------------------------------
+Sitemap: https://ikad.ca/sitemap.xml
+
+# Additional discovery files for AI engines:
+# https://ikad.ca/llms.txt        (summary for AI ingestion)
+# https://ikad.ca/llms-full.txt   (deep content for AI ingestion)
+# https://ikad.ca/humans.txt      (team and credits)
+# https://ikad.ca/.well-known/security.txt (security policy)

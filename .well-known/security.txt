@@ -1,0 +1,9 @@
+Contact: mailto:info@ikad.ca
+Expires: 2027-05-19T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://ikad.ca/.well-known/security.txt
+Policy: https://ikad.ca/privacy-policy/
+
+# IKAD Mechanical security contact
+# Please report any security concerns about ikad.ca to info@ikad.ca.
+# This file follows RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116).

@@ -1,0 +1,17 @@
+{
+  "name": "ikad-mechanical-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IKAD Mechanical Inc. - static HVAC website with SMTP-powered quote forms",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
+  "scripts": {
+    "build": "python _build/generate_pages.py",
+    "dev": "python -m http.server 8765"
+  }
+}

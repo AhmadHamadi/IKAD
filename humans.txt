@@ -1,0 +1,34 @@
+/* TEAM */
+
+  Owner & Lead Technician: Mohanad
+  Site: https://ikad.ca/
+  Location: Oakville, Ontario, Canada
+
+/* COMPANY */
+
+  Name: IKAD Mechanical Inc.
+  Founded: 2010
+  Address: 2275 Upper Middle Rd E, Suite 101, Oakville, ON L6H 0C3
+  Phone: (905) 491-6943
+  Email: info@ikad.ca
+
+/* TRADE */
+
+  HVAC contractor - residential, commercial, industrial
+  TSSA G2 / G3 certified gas fitters
+  ECRA / ESA electrical contractor licensed
+  HRAI member
+  $5M general liability insurance + WSIB coverage
+
+/* THANKS */
+
+  To the 1,200+ Halton homeowners who have trusted IKAD with their homes since 2010.
+  To our equipment partners: Rheem, Lennox, Carrier, Daikin, Mitsubishi, Navien, Rinnai, Viessmann, NTI.
+
+/* SITE */
+
+  Last updated: 2026-05-19
+  Standards: HTML5, CSS3, ES2015+, schema.org, JSON-LD
+  Components: hand-built static site (no framework), Vercel serverless functions for forms
+  Performance: optimized for Core Web Vitals (LCP, INP, CLS)
+  Accessibility: WCAG 2.1 AA target
