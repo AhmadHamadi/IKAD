@@ -125,7 +125,7 @@
     });
   });
 
-  /* ----- Quote form submission via Resend (/api/quote) ----- */
+  /* ----- Quote form submission via SMTP (/api/quote) ----- */
   document.querySelectorAll('form[data-form="quote"]').forEach(function (form) {
     var status = form.querySelector('.form__status');
     if (!status) {
