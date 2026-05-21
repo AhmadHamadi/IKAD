@@ -181,7 +181,7 @@
           var body = '';
           data.forEach(function (v, k) { body += k + ': ' + v + '\n'; });
           var subject = encodeURIComponent('New Quote Request from ' + (data.get('name') || 'Website'));
-          window.location.href = 'mailto:info@ikad.ca?subject=' + subject + '&body=' + encodeURIComponent(body);
+          window.location.href = 'mailto:Saifsabeeh.31@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(body);
         });
     });
   });

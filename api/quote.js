@@ -14,7 +14,7 @@
 
 import nodemailer from 'nodemailer';
 
-const TO_EMAIL = process.env.QUOTE_TO_EMAIL || 'info@ikad.ca';
+const TO_EMAIL = process.env.QUOTE_TO_EMAIL || 'Saifsabeeh.31@gmail.com';
 const SUBJECT_PREFIX = process.env.QUOTE_SUBJECT_PREFIX || '[IKAD Quote]';
 
 const escapeHtml = (s) =>
