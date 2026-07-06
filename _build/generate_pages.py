@@ -155,14 +155,13 @@ def footer(r):
 
 <div style="border-top:1px solid rgba(255,255,255,.1);margin-top:2.25rem;padding-top:1.5rem;font-size:.82rem;color:#94a3b8;line-height:1.7">
 <p style="margin:0 0 .5rem"><strong style="color:#cbd5e1">Popular searches:</strong> HVAC contractor near me, HVAC near me Oakville, trusted HVAC contractor Halton, best HVAC company Oakville, top-rated HVAC Burlington, licensed HVAC contractor near me, family-owned HVAC Oakville, local HVAC contractor Burlington, emergency furnace repair near me, 24 hour HVAC Oakville, same-day AC repair Halton, furnace installation Oakville, AC repair Burlington, heat pump rebate Ontario 2026, tankless water heater Halton, ductless mini-split Mississauga, commercial HVAC contractor Hamilton, custom home HVAC Milton, snow melting driveway Oakville, furnace tune-up Burlington, boiler installation Oakville, TSSA certified gas fitter Halton, ECRA licensed HVAC, HRAI member HVAC Oakville, no-heat repair near me, heat pump installer near me, indoor air quality Halton</p>
-<p style="margin:0"><strong style="color:#cbd5e1">Brands installed:</strong> Rheem, Lennox, Carrier, Daikin, Mitsubishi Hyper-Heat, Goodman, Bryant, York, Trane, Continental, Heil, Navien, Rinnai, Bradford White, John Wood, A.O. Smith, Viessmann, NTI, Lochinvar, Uponor, Watts, Honeywell, Ecobee, Lifebreath, Captive-Aire, Reznor, Greenheck</p>
+<p style="margin:0"><strong style="color:#cbd5e1">Brands installed:</strong> Rheem, Lennox, Carrier, Daikin, Mitsubishi Hyper-Heat, Goodman, Bryant, York, Trane, Continental, Heil, Navien, Rinnai, Bradford White, John Wood, A.O. Smith, Viessmann, NTI, Lochinvar, Uponor, Watts, Ecobee, Lifebreath, Captive-Aire, Reznor, Greenheck</p>
 </div>
 
 <div class="legal" style="margin-top:1.5rem"><span>© <span id="yr">2026</span> IKAD Mechanical Inc. All rights reserved. HVAC contractor in Oakville, Ontario serving Halton Region, Peel and Hamilton since 2010.</span><span><a href="{r}privacy-policy/">Privacy</a> · <a href="{r}terms-of-service/">Terms</a> · <a href="{r}sitemap.xml">Sitemap</a> · <a href="{r}robots.txt">Robots</a></span></div>
 </div></footer>
 <nav class="mobile-dock" aria-label="Mobile quick actions">
   <a href="tel:+19054916943" class="is-primary" aria-label="Call IKAD Mechanical">{icon('phone')}<span>Call</span></a>
-  <a href="sms:+19054916943" aria-label="Text IKAD Mechanical">{icon('message')}<span>Text</span></a>
   <a href="{r}contact/" aria-label="Request a free quote">{icon('mail')}<span>Quote</span></a>
 </nav>
 <script src="{r}assets/js/main.js"></script>
@@ -533,7 +532,7 @@ def build_in_floor():
         ("Brands we install", "Viessmann, Navien, NTI, Lochinvar, Uponor, Watts"),
     ]
 )}
-{brand_pills(["Uponor", "Viessmann", "Navien NCB", "NTI", "Lochinvar", "Watts", "Honeywell", "Taco"])}
+{brand_pills(["Uponor", "Viessmann", "Navien NCB", "NTI", "Lochinvar", "Watts", "Taco"])}
 <span class="eyebrow">Hydronic Radiant Heat</span>
 <h2>The Quiet Comfort Custom-Home Owners Don't Regret</h2>
 <p>Walk into a house with a properly designed in-floor system and you can usually feel it before you see the thermostat. No air rushing out of vents, no cold spots near the windows, no rooms ten degrees apart. Just an even, comfortable warmth coming up from the floor.</p>
@@ -554,13 +553,13 @@ def build_in_floor():
 <p>Even temperatures wall-to-wall. No ductwork pushing dust and allergens. No noisy blower. Floors that are warm in the winter. Lower operating cost than electric heat. And it pairs beautifully with high-efficiency condensing boilers, you can run a 32°C supply temperature and still keep a 22°C house, which is where boilers hit their best efficiency.</p>
 
 <h2 id="zoning">Zoning A Hydronic System Properly</h2>
-<p>The biggest performance difference between a good and a great in-floor system is zoning. Most Halton custom homes we work on use 3 to 7 hydronic zones with individual thermostats: main floor, basement, master ensuite, kitchen, second-floor bedrooms separately if possible. Manifolds with zone valves (Taco, Honeywell, Watts) let each space hold its own setpoint. A bedroom kept at 18°C overnight saves real money compared to one shared loop forcing the whole house to 21°C.</p>
+<p>The biggest performance difference between a good and a great in-floor system is zoning. Most Halton custom homes we work on use 3 to 7 hydronic zones with individual thermostats: main floor, basement, master ensuite, kitchen, second-floor bedrooms separately if possible. Manifolds with zone valves (Taco, Watts) let each space hold its own setpoint. A bedroom kept at 18°C overnight saves real money compared to one shared loop forcing the whole house to 21°C.</p>
 
 <h2 id="floor-types">In-Floor Heating With Different Floor Coverings</h2>
 <p>Tile and stone are the ideal surfaces for radiant: high thermal mass, fast response, no insulation between the heat source and your feet. Engineered hardwood works fine if you keep the supply water below 38°C and let the floor acclimate slowly during the first heating season. Solid hardwood and carpet over radiant are riskier: carpet acts as an insulator that requires hotter supply water (efficiency penalty), and solid hardwood can cup or gap if temperatures spike. We design the loop spacing and supply temperature to match your final flooring choice.</p>
 
 <h2 id="control">Smart Controls For Hydronic Radiant</h2>
-<p>Hydronic in-floor heats slowly. A typical 4-inch concrete slab takes 4 to 6 hours to come up to temperature after a setback. That makes a smart thermostat with predictive recovery (Ecobee Premium, Honeywell Vision Pro IAQ, or a dedicated hydronic controller like tekmar) genuinely useful here, where it'd be marginal on forced air. We program the schedule against typical Halton sleep and work patterns and tune it through the first heating season.</p>
+<p>Hydronic in-floor heats slowly. A typical 4-inch concrete slab takes 4 to 6 hours to come up to temperature after a setback. That makes a smart thermostat with predictive recovery (Ecobee Premium or a dedicated hydronic controller like tekmar) genuinely useful here, where it'd be marginal on forced air. We program the schedule against typical Halton sleep and work patterns and tune it through the first heating season.</p>
 
 {feature_image_section(r, "services/air-balancing.jpg", "Hydronic in-floor heating panel installation in a new Halton home, IKAD Mechanical", "Hydronic in-floor radiant being installed during the rough-in stage of a new build")}
 
@@ -589,7 +588,7 @@ def build_in_floor():
         title="In-Floor Heating Installation Oakville | Hydronic Radiant | IKAD",
         description="Hydronic in-floor radiant heating design and installation in Oakville, Burlington, Milton & Halton. Custom homes, additions, bathrooms. Call (905) 491-6943.",
         canonical=f"{BASE}/in-floor-heating/",
-        og_image=f"{BASE}/assets/images/services/in-floor-heating.jpg",
+        og_image=f"{BASE}/assets/images/services/air-balancing.jpg",
         body=body, active="res", preload_hero="services/air-balancing.jpg",
         schema_extra=service_schema("In-Floor Radiant Heating Installation", "Hydronic Heating", f"{BASE}/in-floor-heating/",
             "Hydronic in-floor radiant heating design and installation for custom homes, additions and retrofits across Halton.") +
@@ -601,7 +600,7 @@ def build_snow_melt():
     r = "../"
     faqs = [
         ("How much does a heated driveway cost in Oakville?",
-         "A typical double driveway (700–900 sq.ft.) runs about $18,000–$32,000 installed for a hydronic system, including the dedicated boiler and snow/temperature sensor. Smaller entry-and-step electric systems start around $2,200. The wide range comes from boiler choice (existing system tie-in vs dedicated unit) and driveway surface, see our <a href=\"" + r + "in-floor-heating/\">in-floor heating page</a> for the related hydronic technology."),
+         "A typical double driveway (700–999 sq.ft.) runs about $18,000–$32,000 installed for a hydronic system, including the dedicated boiler and snow/temperature sensor. Smaller entry-and-step electric systems start around $2,200. The wide range comes from boiler choice (existing system tie-in vs dedicated unit) and driveway surface, see our <a href=\"" + r + "in-floor-heating/\">in-floor heating page</a> for the related hydronic technology."),
         ("Will it work in a Halton winter?",
          "Yes, these systems are designed for our climate. The key sizing inputs are BTU/sq.ft. (typically 125–175 in southern Ontario) and snow/ice sensor type. Properly sized, the system can clear an active storm at the rate it falls. We design for the same Halton snow loads we account for on <a href=\"" + r + "custom-homes/\">custom home mechanical packages</a>."),
         ("How much does it cost to run?",
@@ -609,7 +608,7 @@ def build_snow_melt():
         ("Can you retrofit an existing driveway?",
          "Only by removing and re-laying the surface. We always recommend installing during a new pour or driveway replacement, retrofitting under an existing asphalt or concrete driveway means tearing it out anyway, so the marginal cost of adding heat is much lower at that moment. <a href=\"" + r + "contact/\">Talk to us</a> early in your driveway-resurfacing planning."),
     ]
-    body = hero_quote(r, "services/snow-melting.webp", "Heated Driveways", "Snow Melting Systems In Oakville",
+    body = hero_quote(r, "services/in-floor-heating.jpg", "Heated Driveways", "Snow Melting Systems In Oakville",
         "Never shovel another winter. Hydronic and electric snow melting systems for driveways, walkways and entrances, engineered for Halton winters and tied into your home's heating.", service_default="Snow melt system") + \
         breadcrumbs(r, [("Home","./"),("Residential","residential/"),("Snow Melting Systems", "")]) + f"""
 <section class="section"><div class="container"><div class="svc-detail">
@@ -618,7 +617,7 @@ def build_snow_melt():
     "Heated Driveway &amp; Snow Melting System, Key Facts",
     "IKAD installs hydronic (boiler-fed) and electric (mat-based) snow melting systems for driveways, walkways, front steps and commercial entrances across Halton. We design for our climate (125–175 BTU per sq.ft.) and tie systems to dedicated or shared boilers using Uponor PEX, automatic snow/ice sensors and antifreeze-rated glycol.",
     [
-        ("Hydronic driveway (700–900 sq.ft.)", "$18,000 – $32,000 installed"),
+        ("Hydronic driveway (700–999 sq.ft.)", "$18,000 – $32,000 installed"),
         ("Electric steps &amp; walkway", "From $2,200 installed"),
         ("Operating cost per snow event", "$4 – $8 per typical double driveway"),
         ("Automatic activation", "Snow / temperature sensor included"),
@@ -684,8 +683,8 @@ def build_snow_melt():
         title="Snow Melting Systems &amp; Heated Driveways | IKAD Oakville",
         description="Hydronic and electric snow melting system installation for driveways, walkways and entrances in Oakville, Burlington, Milton & Halton. Call (905) 491-6943.",
         canonical=f"{BASE}/snow-melting-systems/",
-        og_image=f"{BASE}/assets/images/services/snow-melting.webp",
-        body=body, active="res", preload_hero="services/snow-melting.webp",
+        og_image=f"{BASE}/assets/images/services/in-floor-heating.jpg",
+        body=body, active="res", preload_hero="services/in-floor-heating.jpg",
         schema_extra=service_schema("Snow Melting System Installation", "Heated Driveway and Walkway Snow Melt", f"{BASE}/snow-melting-systems/",
             "Hydronic and electric snow melting systems installed for residential driveways, walkways and entrances across Halton.") +
             breadcrumb_schema([("Home",f"{BASE}/"),("Residential",f"{BASE}/residential/"),("Snow Melting",f"{BASE}/snow-melting-systems/")]) +
@@ -793,7 +792,7 @@ def build_air_balancing():
         ("Do you do post-renovation balancing for builders?",
          "Yes. We're often the last trade in on <a href=\"" + r + "custom-homes/\">custom homes</a>, we balance the system, deliver air-flow documentation for the HVAC commissioning report and hand the warranty cert over to the homeowner."),
     ]
-    body = hero_quote(r, "services/air-balancing.jpg", "Even Temperatures Everywhere", "Air Balancing Services In Oakville",
+    body = hero_quote(r, "services/snow-melting.webp", "Even Temperatures Everywhere", "Air Balancing Services In Oakville",
         "Few things are more frustrating than walking from one room that's freezing into another that feels stuffy and hot. Our precise air balancing eliminates uneven temperatures, guaranteed comfort in every room.", service_default="Air balancing") + \
         breadcrumbs(r, [("Home","./"),("Residential","residential/"),("Air Balancing", "")]) + f"""
 <section class="section"><div class="container"><div class="svc-detail">
@@ -871,8 +870,8 @@ def build_air_balancing():
         title="Air Balancing Services Oakville | Fix Uneven Temperatures | IKAD",
         description="Professional HVAC air balancing in Oakville, Burlington, Milton & Halton. Stop hot & cold rooms, lower energy bills. Call (905) 491-6943.",
         canonical=f"{BASE}/air-balancing/",
-        og_image=f"{BASE}/assets/images/services/air-balancing.jpg",
-        body=body, active="res", preload_hero="services/air-balancing.jpg",
+        og_image=f"{BASE}/assets/images/services/snow-melting.webp",
+        body=body, active="res", preload_hero="services/snow-melting.webp",
         schema_extra=service_schema("HVAC Air Balancing", "Air Balancing and Airflow Testing", f"{BASE}/air-balancing/",
             "Professional HVAC air balancing service for residential homes across Halton, measure, adjust and balance airflow to every register.") +
             breadcrumb_schema([("Home",f"{BASE}/"),("Residential",f"{BASE}/residential/"),("Air Balancing",f"{BASE}/air-balancing/")]) +
@@ -907,7 +906,7 @@ def build_custom_homes():
         ("Best engaged at", "Concept / framing stage, before drywall"),
     ]
 )}
-{brand_pills(["Lennox SLP99V", "Carrier Infinity", "Rheem Modulating", "Mitsubishi Hyper-Heat", "Daikin Aurora", "Viessmann", "Lifebreath HRV", "Honeywell"])}
+{brand_pills(["York Affinity YP9C", "Luxaire Acclimate LP9C", "Coleman Echelon CP9C", "Mitsubishi Hyper-Heat", "Daikin Aurora", "Viessmann", "Lifebreath HRV"])}
 <span class="eyebrow">Custom Mechanical For Custom Homes</span>
 <h2>Tailored Comfort For Your Dream Home</h2>
 <p>A 5,000 sq.ft. custom home with floor-to-ceiling windows on the south side and a finished basement gym should not have the same furnace as a 1,800 sq.ft. semi from 1972. Yet that's exactly what happens when a builder hands the mechanical package to whoever submits the lowest number on a spreadsheet.</p>
@@ -935,7 +934,7 @@ def build_custom_homes():
 <p>The mechanical room is the most-undersized space in most custom Halton homes. A well-designed 5,000 sq.ft. home needs roughly 80 to 120 square feet of mechanical room with 7-foot minimum ceiling and direct exterior access for combustion air. We need clearance around the furnace (24 inches front, 6 inches sides), boiler (per manufacturer), HRV/ERV (4 feet for filter access), water heaters (24 inches front), zone valve manifolds (3-foot wall section per manifold), and the gas meter with shutoff. A common mistake is locating the mechanical room behind a finished wine cellar or theatre, that's a 20-year service nightmare. We coordinate with your architect at framing stage so this gets done right the first time.</p>
 
 <h2 id="hybrid-systems">Hybrid Forced-Air + Hydronic Systems</h2>
-<p>The best Halton custom home mechanical packages we install are hybrid: forced-air heat pumps with gas-furnace backup on the main and upper floors (for cooling, dehumidification and quick recovery), plus hydronic in-floor radiant in the basement, ensuites, mudroom and any below-grade or tile-heavy spaces. The forced-air side handles AC and rapid response; the hydronic side handles the slow, even heat that makes the lived-in spaces feel premium. The control logic is the hard part, we use tekmar or Honeywell Vision Pro IAQ controllers that coordinate which system runs in which zone at which time of year. See our <a href="{r}in-floor-heating/">in-floor heating page</a> for the hydronic side and our <a href="{r}air-conditioning-heat-pumps/">heat pump page</a> for the forced-air side.</p>
+<p>The best Halton custom home mechanical packages we install are hybrid: forced-air heat pumps with gas-furnace backup on the main and upper floors (for cooling, dehumidification and quick recovery), plus hydronic in-floor radiant in the basement, ensuites, mudroom and any below-grade or tile-heavy spaces. The forced-air side handles AC and rapid response; the hydronic side handles the slow, even heat that makes the lived-in spaces feel premium. The control logic is the hard part, we use tekmar IAQ controllers that coordinate which system runs in which zone at which time of year. See our <a href="{r}in-floor-heating/">in-floor heating page</a> for the hydronic side and our <a href="{r}air-conditioning-heat-pumps/">heat pump page</a> for the forced-air side.</p>
 
 <h2 id="permits-inspections">Permits And Inspections On A Custom Build</h2>
 <p>Halton Region custom homes require permits from the municipality (building permit for HVAC), TSSA (gas piping, every joint inspected), ECRA/ESA (electrical for HVAC wiring), and increasingly Halton Region Health (for HRV/ERV in tighter envelopes). We pull all four, schedule inspections, and meet inspectors on site. Builders trust us because we don't slip rough-in dates and we don't fail inspections. Failed inspections push drywall, finishes and occupancy by weeks, our last failed gas piping inspection was in 2019.</p>
@@ -1079,7 +1078,7 @@ def build_residential():
         ("Same-day no-heat / no-cool", "Yes, during business hours across Halton"),
         ("Financing", "Canadian HVAC finance partners; same-day approvals"),
         ("Rebates handled", "Enbridge HER+ &amp; Canada Greener Homes Loan paperwork filed by us"),
-        ("Certifications", "TSSA G2/G3, ECRA/ESA, HRAI member, $5M liability, WSIB"),
+        ("Certifications", "TSSA G1/G2, ECRA/ESA, HRAI member, $5M liability, WSIB"),
     ]
 )}
 </div></section>
@@ -1093,13 +1092,13 @@ def build_residential():
 <section class="section section--gray"><div class="container">
 <div class="svc-grid">
 <a class="svc-card" href="{r}heating-services/"><img class="svc-card__img" src="{r}assets/images/services/heating-technician.jpg" alt="Heating services" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Heating Services</h3><p class="svc-card__desc">Dependable heating solutions designed to keep your home warm and comfortable all winter long. From new system installations and replacements to repairs and preventative maintenance.</p><span class="svc-card__link">Explore Heating</span></div></a>
-<a class="svc-card" href="{r}air-conditioning-heat-pumps/"><img class="svc-card__img" src="{r}assets/images/services/air-conditioning.webp" alt="AC &amp; heat pumps" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Air Conditioning &amp; Heat Pumps</h3><p class="svc-card__desc">Installation, repair and maintenance of residential air conditioning systems and heat pumps, focused on year-round comfort and energy efficiency.</p><span class="svc-card__link">Explore Cooling</span></div></a>
+<a class="svc-card" href="{r}air-conditioning-heat-pumps/"><img class="svc-card__img" src="{r}assets/images/services/york-ac-heat-pump.jpg" alt="AC &amp; heat pumps" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Air Conditioning &amp; Heat Pumps</h3><p class="svc-card__desc">Installation, repair and maintenance of residential air conditioning systems and heat pumps, focused on year-round comfort and energy efficiency.</p><span class="svc-card__link">Explore Cooling</span></div></a>
 <a class="svc-card" href="{r}water-heaters/"><img class="svc-card__img" src="{r}assets/images/services/water-heaters.jpg" alt="Water heaters" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Water Heaters</h3><p class="svc-card__desc">Installation, service and maintenance ensuring consistent performance, energy savings and long-lasting dependability, tank and tankless options.</p><span class="svc-card__link">See Water Heaters</span></div></a>
-<a class="svc-card" href="{r}in-floor-heating/"><img class="svc-card__img" src="{r}assets/images/services/in-floor-heating.jpg" alt="In-floor heating" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">In-Floor Heating</h3><p class="svc-card__desc">Expert installation delivering even, energy-efficient warmth, suitable for bathrooms, basements, kitchens and whole custom homes.</p><span class="svc-card__link">Learn About Radiant</span></div></a>
-<a class="svc-card" href="{r}snow-melting-systems/"><img class="svc-card__img" src="{r}assets/images/services/snow-melting.webp" alt="Snow melting systems" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Snow Melting Systems</h3><p class="svc-card__desc">Design and installation of systems that keep your home's driveways, walkways and entrances clear and safe all winter long.</p><span class="svc-card__link">See Snow Melt</span></div></a>
+<a class="svc-card" href="{r}in-floor-heating/"><img class="svc-card__img" src="{r}assets/images/services/air-balancing.jpg" alt="In-floor heating" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">In-Floor Heating</h3><p class="svc-card__desc">Expert installation delivering even, energy-efficient warmth, suitable for bathrooms, basements, kitchens and whole custom homes.</p><span class="svc-card__link">Learn About Radiant</span></div></a>
+<a class="svc-card" href="{r}snow-melting-systems/"><img class="svc-card__img" src="{r}assets/images/services/in-floor-heating.jpg" alt="Snow melting systems" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Snow Melting Systems</h3><p class="svc-card__desc">Design and installation of systems that keep your home's driveways, walkways and entrances clear and safe all winter long.</p><span class="svc-card__link">See Snow Melt</span></div></a>
 <a class="svc-card" href="{r}custom-homes/"><img class="svc-card__img" src="{r}assets/images/services/custom-homes.jpg" alt="Custom homes" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Custom Homes</h3><p class="svc-card__desc">Tailored HVAC solutions for custom homes, comfort, efficiency and seamless integration with your build.</p><span class="svc-card__link">Custom Home HVAC</span></div></a>
 <a class="svc-card" href="{r}duct-work/"><img class="svc-card__img" src="{r}assets/images/services/duct-work.webp" alt="Ductwork" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Duct Work</h3><p class="svc-card__desc">Professional design and maintenance ensuring proper airflow, improved efficiency and consistent comfort in every room.</p><span class="svc-card__link">Explore Ductwork</span></div></a>
-<a class="svc-card" href="{r}air-balancing/"><img class="svc-card__img" src="{r}assets/images/services/air-balancing.jpg" alt="Air balancing" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Air Balancing</h3><p class="svc-card__desc">Services to optimize airflow, improve comfort and maximize system efficiency throughout your home.</p><span class="svc-card__link">Balance My Home</span></div></a>
+<a class="svc-card" href="{r}air-balancing/"><img class="svc-card__img" src="{r}assets/images/services/snow-melting.webp" alt="Air balancing" loading="lazy" width="800" height="500"><div class="svc-card__body"><h3 class="svc-card__title">Air Balancing</h3><p class="svc-card__desc">Services to optimize airflow, improve comfort and maximize system efficiency throughout your home.</p><span class="svc-card__link">Balance My Home</span></div></a>
 </div>
 </div></section>
 """ + service_area_map_section(r, "Residential HVAC") + faq_block(faqs) + cta_banner(r, "Request A Free Residential Quote", "On-site estimates within a few business days. No high-pressure sales.")
@@ -1179,6 +1178,13 @@ def build_projects():
 <div class="cta-banner"><div><h2>Your Project Could Be Next</h2><p>Free estimates across Halton and the GTA. Tell us about your project.</p></div><div class="btn-row"><a class="btn btn--secondary btn--large" href="{r}contact/">Request Estimate</a><a class="btn btn--outline btn--large" href="tel:+19054916943">Call Now</a></div></div>
 </div></section>
 """
+    pg_faqs = [
+        ("How long does a typical furnace or AC install take?", "Most furnace or AC replacements are a single day. Jobs that involve new gas piping, venting changes, or duct modifications run to two days. We give you a firm timeline with the quote."),
+        ("Do you handle the permits?", "Yes. We pull the mechanical permits and coordinate the TSSA inspection as part of every applicable install, you do not lift a finger."),
+        ("Can I see references from past customers?", "Yes. Read verified reviews on our <a href='../reviews/'>reviews page</a>, on HomeStars, and on Google Business Profile (search IKAD Mechanical Oakville)."),
+        ("What areas do you take projects in?", "All of Halton (Oakville, Burlington, Milton, Halton Hills) plus Mississauga, Hamilton and Brampton, with no travel surcharge."),
+    ]
+    body = body + faq_block(pg_faqs, "Project &amp; Install Questions") + faq_schema(pg_faqs)
     page(
         out="our-projects/index.html", depth=1,
         title="Our HVAC Project Gallery | IKAD Mechanical Oakville",
@@ -1195,14 +1201,14 @@ def build_about():
         "We're a family-owned full-service HVAC contractor based in Oakville. We grew on word-of-mouth, and we're still that company: one number, one team, one name behind every job.") + \
         breadcrumbs(r, [("Home","./"),("About", "")]) + f"""
 <section class="section"><div class="container"><div class="feature">
-<div class="feature__media"><img src="{r}assets/images/services/heating-2.jpg" alt="IKAD Mechanical technician working in a residential mechanical room in Oakville" loading="lazy" width="900" height="600"></div>
+<div class="feature__media"><img src="{r}assets/images/hero/hero-ikad-team.jpg" alt="The IKAD Mechanical family team in Oakville" loading="lazy" width="900" height="600"></div>
 <div class="feature__copy">
 <span class="eyebrow">Who We Are</span>
 <h2>A Family Name Behind Every Job</h2>
 <p>IKAD Mechanical is a family-owned full-service plumbing &amp; HVAC company that opened its doors in Oakville in 2010. What started as one truck and a small crew is now a team installing and servicing heating, cooling, ventilation and plumbing across Halton, Peel and Hamilton, for homes, custom builds, restaurants, daycares and industrial facilities.</p>
-<p>The company was founded by Mohanad, the name customers mention by name in reviews on HomeStars, who still answers the phone on most weekdays and is on site for every custom-home walkthrough. We grew the slow way: showing up on time, sizing equipment correctly, and standing behind the work. That's why customers who hired us in 2011 are still calling, and why builders trust us on their next subdivision. We don't subcontract installs and we don't outsource service.</p>
+<p>The company was founded by Ahmad, the name customers mention by name in reviews on HomeStars, who still answers the phone on most weekdays and is on site for every custom-home walkthrough. We grew the slow way: showing up on time, sizing equipment correctly, and standing behind the work. That's why customers who hired us in 2011 are still calling, and why builders trust us on their next subdivision. We don't subcontract installs and we don't outsource service.</p>
 <ul>
-<li>Licensed gas fitters (G2/G3) &amp; HVAC technicians (313A/313D)</li>
+<li>Licensed gas fitters (G1/G2) &amp; HVAC technicians (313A/313D)</li>
 <li>TSSA contractor, ECRA/ESA licensed, HRAI member in good standing</li>
 <li>Manufacturer-certified for Rheem, Lennox, Carrier, Daikin, Mitsubishi, Navien &amp; Rinnai</li>
 <li>$5M liability insurance &amp; WSIB coverage on every job site</li>
@@ -1224,16 +1230,16 @@ def build_about():
 
 <section class="section"><div class="container" style="max-width:880px" id="owner">
 <span class="eyebrow">Meet The Owner</span>
-<h2>Mohanad, Owner &amp; Lead Technician</h2>
+<h2>Ahmad, Owner &amp; Lead Technician</h2>
 <div style="background:#f6f7f9;border-left:3px solid #e30613;border-radius:6px;padding:1.25rem 1.5rem;margin:1rem 0">
-<p style="margin:0 0 .75rem;color:#334155;line-height:1.7"><strong>Mohanad</strong> founded IKAD Mechanical in 2010 and personally answers the phone, runs site visits, and is on most install jobs in 2026. He's a TSSA-certified G2 (commercial gas fitting) and G3 (residential gas fitting) licensed contractor, ECRA/ESA licensed for HVAC electrical, and has 15+ years of installing across Halton.</p>
-<p style="margin:0;color:#475569;font-size:.95rem;line-height:1.7">Halton homeowners who hire IKAD work directly with the owner from quote to commissioning, not through a commissioned salesperson. Mohanad is the name mentioned by reviewers on <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">HomeStars</a> ("Mohanad and his team were personable and patient") and on our Google Business Profile.</p>
+<p style="margin:0 0 .75rem;color:#334155;line-height:1.7"><strong>Ahmad</strong> founded IKAD Mechanical in 2010 and personally answers the phone, runs site visits, and is on most install jobs in 2026. He's a TSSA-certified G1 (commercial gas fitting) and G2 (residential gas fitting) licensed contractor, ECRA/ESA licensed for HVAC electrical, and has 15+ years of installing across Halton.</p>
+<p style="margin:0;color:#475569;font-size:.95rem;line-height:1.7">Halton homeowners who hire IKAD work directly with the owner from quote to commissioning, not through a commissioned salesperson. Ahmad is the name mentioned by reviewers on <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">HomeStars</a> ("Ahmad and his team were personable and patient") and on our Google Business Profile.</p>
 <p style="margin:.75rem 0 0;color:#64748b;font-size:.88rem"><strong>License &amp; certification IDs available on request</strong> — TSSA contractor ID, ECRA/ESA registration #, HRAI member ID, WSIB clearance. Property managers and builders, ask at quote stage and we'll share copies.</p>
 </div>
 
 <span class="eyebrow" style="margin-top:1rem;display:inline-block">How It Started</span>
 <h2 style="margin-top:1rem">From One Truck In 2010 To A Halton-Wide HVAC Operation</h2>
-<p>IKAD Mechanical opened its doors in <a href="{r}service-areas/oakville/">Oakville</a> in 2010, when Mohanad bought his first service truck and started taking calls from homes in the Glen Abbey and Bronte neighbourhoods. The decision to start the company came out of a frustration that's familiar to anyone who has hired a tradesperson in the GTA: too many contractors over-promise on the phone, send a different crew than the one who quoted, and disappear after the warranty starts.</p>
+<p>IKAD Mechanical opened its doors in <a href="{r}service-areas/oakville/">Oakville</a> in 2010, when Ahmad bought his first service truck and started taking calls from homes in the Glen Abbey and Bronte neighbourhoods. The decision to start the company came out of a frustration that's familiar to anyone who has hired a tradesperson in the GTA: too many contractors over-promise on the phone, send a different crew than the one who quoted, and disappear after the warranty starts.</p>
 <p>The original idea was simple. Show up when you said you would. Size the equipment to the home, not to whatever happened to be on the truck. Stand behind the work after the cheque clears. Fifteen years and 1,200+ jobs later, that's still how we operate. The trucks are newer and the team is bigger, but every install lead still walks every job from quote through final commissioning, and the owner still answers the phone on most weekdays.</p>
 
 <h2 style="margin-top:2rem">Where We've Worked (15 Years Across The Western GTA)</h2>
@@ -1252,7 +1258,7 @@ def build_about():
 <h2 style="margin-top:2rem">Certifications, Licensing And Insurance</h2>
 <p>Working on natural gas, propane, refrigerant lines and combustion equipment without proper licensing in Ontario isn't just risky, it's illegal. We hold every credential the work requires:</p>
 <ul style="line-height:1.8">
-<li><strong>TSSA Gas Fitter G2 and G3 licences</strong> for all natural gas and propane work</li>
+<li><strong>TSSA Gas Fitter G1 and G2 licences</strong> for all natural gas and propane work</li>
 <li><strong>TSSA Authorized Contractor</strong> status for boiler, water heater and commercial gas equipment</li>
 <li><strong>ECRA/ESA licensed</strong> for HVAC-related electrical work, high voltage and low voltage</li>
 <li><strong>HRAI member in good standing</strong> (Heating, Refrigeration and Air Conditioning Institute of Canada)</li>
@@ -1292,7 +1298,7 @@ def build_about():
 <h2 style="margin-top:2rem">Where To Verify Us</h2>
 <p>You don't have to take our word for any of this. Verify everything:</p>
 <ul style="line-height:1.8">
-<li><strong>HomeStars profile:</strong> <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">Read every customer review</a> Mohanad is mentioned in many of them by name</li>
+<li><strong>HomeStars profile:</strong> <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">Read every customer review</a> Ahmad is mentioned in many of them by name</li>
 <li><strong>HRAI membership:</strong> searchable on the <a href="https://www.hrai.ca/" rel="noopener" target="_blank">HRAI.ca</a> contractor directory</li>
 <li><strong>TSSA contractor status:</strong> verifiable on the <a href="https://www.tssa.org/" rel="noopener" target="_blank">TSSA.org</a> public registry</li>
 <li><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100088377265654" rel="noopener" target="_blank">IKAD Mechanical</a> for recent job photos and time-lapse videos</li>
@@ -1327,7 +1333,7 @@ def build_about():
         "@context":"https://schema.org",
         "@type":"Person",
         "@id": f"{BASE}/about/#owner",
-        "name":"Mohanad",
+        "name":"Ahmad",
         "jobTitle":"Owner & Lead Technician",
         "worksFor": {"@id": f"{BASE}/#business"},
         "url": f"{BASE}/about/",
@@ -1339,8 +1345,8 @@ def build_about():
             "Commercial rooftop units","Make-up air units","Snow melting systems"
         ],
         "hasCredential":[
-            {"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"TSSA Gas Fitter G2 (Commercial Gas Fitting)","recognizedBy":{"@type":"Organization","name":"Technical Standards and Safety Authority (TSSA)","url":"https://www.tssa.org/"}},
-            {"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"TSSA Gas Fitter G3 (Residential Gas Fitting)","recognizedBy":{"@type":"Organization","name":"Technical Standards and Safety Authority (TSSA)","url":"https://www.tssa.org/"}},
+            {"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"TSSA Gas Fitter G1 (Commercial Gas Fitting)","recognizedBy":{"@type":"Organization","name":"Technical Standards and Safety Authority (TSSA)","url":"https://www.tssa.org/"}},
+            {"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"TSSA Gas Fitter G2 (Residential Gas Fitting)","recognizedBy":{"@type":"Organization","name":"Technical Standards and Safety Authority (TSSA)","url":"https://www.tssa.org/"}},
             {"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"ECRA / ESA Electrical Contractor License","recognizedBy":{"@type":"Organization","name":"Electrical Safety Authority","url":"https://esasafe.com/"}},
             {"@type":"EducationalOccupationalCredential","credentialCategory":"membership","name":"HRAI Member","recognizedBy":{"@type":"Organization","name":"Heating, Refrigeration and Air Conditioning Institute of Canada","url":"https://www.hrai.ca/"}}
         ],
@@ -1351,6 +1357,13 @@ def build_about():
             "https://www.instagram.com/ikadmechanical/"
         ]
     }
+    pg_faqs = [
+        ("Who owns IKAD Mechanical?", "IKAD is family-owned and was founded by Ahmad in 2010. He still answers the phone most weekdays and is on site for custom-home walkthroughs."),
+        ("Is IKAD licensed and insured?", "Yes. TSSA Gas Fitter G1 and G2 licences, ECRA/ESA electrical licensing, HRAI membership, $5M liability insurance and WSIB coverage on every job site. We share documentation on request."),
+        ("Do you use subcontractors?", "No. Our own crew does every install and service call. The person who quotes your job is part of the team that shows up on install day."),
+        ("How long has IKAD been in business?", "Since 2010, serving over 1,200 Halton homes and businesses. Customers who first hired us in 2011 still call us today."),
+    ]
+    body = body + faq_block(pg_faqs, "About IKAD Questions") + faq_schema(pg_faqs)
     page(
         out="about/index.html", depth=1,
         title="About IKAD Mechanical | Family-Owned HVAC Oakville Since 2010",
@@ -1413,6 +1426,13 @@ def build_contact():
 </div>
 </div></section>
 """
+    pg_faqs = [
+        ("What is the fastest way to get a quote?", "Call (905) 491-6943 or fill in the form on this page. For equipment replacements we book a free on-site visit and give you a fixed written price."),
+        ("Do you offer emergency service?", "Yes. We keep no-heat and no-cool emergency slots open every winter and summer, and offer 24/7 emergency response across Halton. Call (905) 491-6943."),
+        ("Are estimates free?", "On-site estimates for residential equipment replacements are free across Halton, Peel and Hamilton. Custom-home and large commercial design carries a small fee that we credit against the install."),
+        ("What are your hours?", "Monday to Friday 8am to 6pm, Saturday 9am to 4pm. Sundays and emergencies, call anytime."),
+    ]
+    body = body + faq_block(pg_faqs, "Contact &amp; Booking Questions") + faq_schema(pg_faqs)
     page(
         out="contact/index.html", depth=1,
         title="Contact IKAD Mechanical | Free HVAC Quotes In Oakville",
@@ -1444,7 +1464,7 @@ CITIES = [
         "population":"~213,000 (2021 census, fastest-growing town in Halton)",
         "climate_note":"Mild lake-moderated climate near Lake Ontario. Summer humidity south of the QEW can run 70–85%, AC sizing has to account for latent load, not just temperature. North of Dundas is more exposed to wind and slightly colder winters.",
         "copy":"Oakville is where IKAD Mechanical started in 2010 and where most of our trucks roll out every morning. From the lakefront heritage homes near Old Oakville to the newer custom builds north of Dundas, we know the housing stock, what tends to be original equipment from the 1980s build-out, what's been replaced once already, and where the gas line runs.",
-        "story":"A recent example: a 1992 ranch in Bronte where the original Lennox G24 was on its second heat exchanger crack. We pulled it, ran a Manual J that came back at 56k BTU (the old unit was 100k), and installed a Rheem R96V two-stage with a new Ecobee. The homeowner's January gas bill dropped 28% year-over-year.",
+        "story":"A recent example: a 1992 ranch in Bronte where the original Lennox G24 was on its second heat exchanger crack. We pulled it, ran a Manual J that came back at 56k BTU (the old unit was 100k), and installed a York LX TM9V two-stage with a new Ecobee. The homeowner's January gas bill dropped 28% year-over-year.",
         "case_image":"projects/furnace-replacement-oakville.jpg",
         "case_alt":"Recent furnace replacement project in Oakville by IKAD Mechanical",
         "neighborhoods":["Glen Abbey","Bronte","Joshua Creek","West Oak Trails","College Park","Old Oakville","Iroquois Ridge","Westmount","River Oaks","Falgarwood","The Preserve","Uptown Core","Eastlake","Clearview","Palermo West"],
@@ -2006,7 +2026,7 @@ def build_city(city):
 <div class="text-center" style="max-width:720px;margin:0 auto 1.5rem"><span class="eyebrow">Looking For HVAC Near You?</span><h2>Trusted Local HVAC Contractor Near You In {name}</h2><p class="lead" style="margin:0 auto">Searching for an HVAC contractor near you in {name}? IKAD Mechanical is a family-owned, TSSA-certified HVAC contractor based in Oakville since 2010, with {response.lower()} response across {name}.</p></div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0">
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem;text-align:center"><div style="font-size:1.6rem;font-weight:800;color:#e30613;line-height:1">Local</div><div style="font-size:.82rem;color:#475569;margin-top:.35rem">Oakville-based, no national-chain handoffs</div></div>
-<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem;text-align:center"><div style="font-size:1.6rem;font-weight:800;color:#e30613;line-height:1">Licensed</div><div style="font-size:.82rem;color:#475569;margin-top:.35rem">TSSA G2/G3, ECRA/ESA, HRAI member</div></div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem;text-align:center"><div style="font-size:1.6rem;font-weight:800;color:#e30613;line-height:1">Licensed</div><div style="font-size:.82rem;color:#475569;margin-top:.35rem">TSSA G1/G2, ECRA/ESA, HRAI member</div></div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem;text-align:center"><div style="font-size:1.6rem;font-weight:800;color:#e30613;line-height:1">Insured</div><div style="font-size:.82rem;color:#475569;margin-top:.35rem">$5M liability + WSIB on every job</div></div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem;text-align:center"><div style="font-size:1.6rem;font-weight:800;color:#e30613;line-height:1">Family-Run</div><div style="font-size:.82rem;color:#475569;margin-top:.35rem">Same owner since 2010, no commissioned salespeople</div></div>
 </div>
@@ -2272,10 +2292,10 @@ BLOG_POSTS = [
 <table>
 <thead><tr><th>Furnace Type</th><th>Installed Price (Oakville 2026)</th><th>Best For</th></tr></thead>
 <tbody>
-<tr><td>Entry-level 95% single-stage (Goodman, Continental, Heil)</td><td>$3,500 – $4,200</td><td>Tight budget, smaller homes, plan to sell within 5 years</td></tr>
-<tr><td>Mid-tier 95% single-stage (Rheem, Lennox EL series)</td><td>$3,900 – $4,800</td><td>Standard replacement, good warranty</td></tr>
-<tr><td>Two-stage 96% (Rheem R96, Carrier Comfort, Lennox EL297)</td><td>$4,800 – $6,200</td><td>Most homes, best value tier</td></tr>
-<tr><td>Variable-speed modulating (Lennox SLP99V, Carrier Infinity, Rheem R98V)</td><td>$6,400 – $7,800</td><td>Comfort-focused, premium homes, very tight construction</td></tr>
+<tr><td>Entry-level 95% single-stage (Coleman TG9S, Coleman TM9E)</td><td>$3,500 – $4,200</td><td>Tight budget, smaller homes, plan to sell within 5 years</td></tr>
+<tr><td>Mid-tier two-stage 97% (York)</td><td>$3,900 – $4,800</td><td>Standard replacement, good warranty</td></tr>
+<tr><td>Variable-speed (ECM) gas furnace, 97%+ (York)</td><td>$4,800 – $6,200</td><td>Most homes, best value tier</td></tr>
+<tr><td>Variable-capacity gas furnace (York)</td><td>$6,400 – $7,800</td><td>Comfort-focused, premium homes, very tight construction</td></tr>
 <tr><td>Hybrid (furnace + air-source heat pump)</td><td>$11,500 – $18,000 (before rebates)</td><td>Cutting gas usage 70–80% with Greener Homes Loan</td></tr>
 </tbody>
 </table>
@@ -2286,7 +2306,7 @@ BLOG_POSTS = [
 <li><strong>Capacity (BTU).</strong> A 60k unit costs about $250 less than a 100k unit at the wholesale level, but a properly-sized 60k installed in a too-tight envelope is much better than an oversized 100k that short-cycles.</li>
 <li><strong>Venting.</strong> If we're going from B-vent to direct-vent (most condensing furnaces require this), there's PVC running through a wall, sealing, condensate piping, and a neutralizer. About $400–$800 of extra labour and material.</li>
 <li><strong>Gas line.</strong> Some 1980s-era Halton homes have 1/2" gas lines that don't quite meet the demand of a modern high-efficiency furnace combined with a tankless or fireplace. Upsizing to 3/4" or a flex line: $250–$600.</li>
-<li><strong>Thermostat.</strong> A basic programmable thermostat is included on most quotes. An Ecobee Premium or Nest is $300–$450 add-on. A modulating-furnace-specific thermostat (Carrier Infinity, Lennox iComfort) can be $700–$900 because the furnace won't operate at full capability without it.</li>
+<li><strong>Thermostat.</strong> A basic programmable thermostat is included on most quotes. An Ecobee Premium or Nest is $300–$450 add-on. A modulating-furnace-specific thermostat (York Hx communicating control) can be $700–$900 because the furnace won't operate at full capability without it.</li>
 <li><strong>Removal &amp; disposal of the old furnace.</strong> Should always be included. Verify.</li>
 <li><strong>Workmanship warranty.</strong> Standard is one year. We include two. Some contractors charge $200–$400 extra for a 5- or 10-year labour warranty.</li>
 </ul>
@@ -2295,16 +2315,15 @@ BLOG_POSTS = [
 <table>
 <thead><tr><th>Brand &amp; Model</th><th>Tier</th><th>Installed Price</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>Goodman GMVC96 (96% two-stage variable-speed)</td><td>Mid</td><td>$4,400 – $5,600</td><td>Best value, 10-year parts warranty, decent rebate fit</td></tr>
-<tr><td>Continental CC9 / Heil G9MXE</td><td>Entry</td><td>$3,500 – $4,200</td><td>Budget, fixed-speed blower</td></tr>
-<tr><td>Rheem R96V (96% two-stage variable-speed)</td><td>Mid</td><td>$4,900 – $6,100</td><td>Most common Halton install, strong dealer network</td></tr>
-<tr><td>Carrier Performance 96 59TP6</td><td>Mid</td><td>$5,000 – $6,400</td><td>Good Infinity-thermostat compatibility</td></tr>
-<tr><td>Lennox EL297V (97% two-stage variable-speed)</td><td>Mid-high</td><td>$5,400 – $6,800</td><td>Excellent dealer rebate stack</td></tr>
-<tr><td>Rheem R98V (98% modulating)</td><td>Premium</td><td>$6,400 – $7,400</td><td>Modulates 35-100%, very quiet</td></tr>
-<tr><td>Carrier Infinity 59MN7 (98.5% modulating)</td><td>Premium</td><td>$6,800 – $7,900</td><td>Requires Infinity thermostat ($700 add)</td></tr>
-<tr><td>Lennox SLP99V (99% modulating)</td><td>Premium</td><td>$7,000 – $8,200</td><td>Highest AFUE on the market, requires iComfort</td></tr>
-<tr><td>Trane S9V2 (97% two-stage)</td><td>Mid-high</td><td>$5,200 – $6,700</td><td>Tight Halton dealer network, longer service-call wait</td></tr>
-<tr><td>Daikin DM97MC (97% modulating)</td><td>Premium</td><td>$6,500 – $7,800</td><td>12-year parts warranty, replacement guarantee</td></tr>
+<tr><td>Coleman TG9S (95% single-stage)</td><td>Entry</td><td>$3,500 – $4,200</td><td>Budget, fixed-speed blower, reliable and easy to service</td></tr>
+<tr><td>Coleman TM9E (96% single-stage)</td><td>Entry</td><td>$3,700 – $4,400</td><td>Great entry tier, strong parts availability</td></tr>
+<tr><td>Coleman Echelon CP9C (98% modulating)</td><td>Premium</td><td>$6,600 – $7,700</td><td>Premium performance at value pricing</td></tr>
+<tr><td>Luxaire LX TM9V (96% two-stage variable-speed)</td><td>Mid</td><td>$4,600 – $5,800</td><td>Best value two-stage, quiet variable-speed blower</td></tr>
+<tr><td>Luxaire Acclimate LC9C (97% two-stage)</td><td>Mid-high</td><td>$5,400 – $6,800</td><td>Communicating-ready controls, strong warranty</td></tr>
+<tr><td>Luxaire Acclimate LP9C (98% modulating)</td><td>Premium</td><td>$6,900 – $8,000</td><td>Top efficiency, 10-year parts warranty</td></tr>
+<tr><td>York LX TM9V (96% two-stage variable-speed)</td><td>Mid</td><td>$4,900 – $6,100</td><td>Most common Halton install, excellent parts network</td></tr>
+<tr><td>York Affinity YC97C (97% two-stage)</td><td>Mid-high</td><td>$5,600 – $6,900</td><td>Excellent comfort, communicating capable</td></tr>
+<tr><td>York Affinity YP9C (98% modulating variable-speed)</td><td>Premium</td><td>$6,800 – $7,900</td><td>Modulates 35-100%, very quiet, highest AFUE we install</td></tr>
 </tbody>
 </table>
 
@@ -2314,7 +2333,7 @@ BLOG_POSTS = [
 <li><strong>Capacity (BTU).</strong> A 60k unit costs about $250 less than a 100k unit at the wholesale level, but a properly-sized 60k installed in a too-tight envelope is much better than an oversized 100k that short-cycles.</li>
 <li><strong>Venting.</strong> If we're going from B-vent to direct-vent (most condensing furnaces require this), there's PVC running through a wall, sealing, condensate piping, and a neutralizer. About $400–$800 of extra labour and material.</li>
 <li><strong>Gas line.</strong> Some 1980s-era Halton homes have 1/2" gas lines that don't quite meet the demand of a modern high-efficiency furnace combined with a tankless or fireplace. Upsizing to 3/4" or a flex line: $250–$600.</li>
-<li><strong>Thermostat.</strong> A basic programmable thermostat is included on most quotes. An Ecobee Premium or Nest is $300–$450 add-on. A modulating-furnace-specific thermostat (Carrier Infinity, Lennox iComfort) can be $700–$900 because the furnace won't operate at full capability without it.</li>
+<li><strong>Thermostat.</strong> A basic programmable thermostat is included on most quotes. An Ecobee Premium or Nest is $300–$450 add-on. A modulating-furnace-specific thermostat (York Hx communicating control) can be $700–$900 because the furnace won't operate at full capability without it.</li>
 <li><strong>Removal &amp; disposal of the old furnace.</strong> Should always be included. Verify.</li>
 <li><strong>Workmanship warranty.</strong> Standard is one year. We include two. Some contractors charge $200–$400 extra for a 5- or 10-year labour warranty.</li>
 </ul>
@@ -2357,7 +2376,7 @@ BLOG_POSTS = [
         "meta_title": "Heat Pump vs Furnace Ontario 2026, Real Cost | IKAD",
         "description": "Heat pump vs furnace in Ontario 2026: installed costs, cold-climate performance to -25°C, rebate stack, payback period. From a 15-year Halton HVAC contractor.",
         "date": "2026-01-15",
-        "image": "services/air-conditioning.webp",
+        "image": "services/york-ac-heat-pump.jpg",
         "image_alt": "Cold-climate heat pump outdoor unit installed by IKAD in Oakville",
         "excerpt": "Modern cold-climate heat pumps work efficiently down to -25°C and pair beautifully with an existing furnace as a hybrid. With Greener Homes Loan funding, the payback is faster than most people expect.",
         "category": "Comparison Guides",
@@ -2622,7 +2641,7 @@ BLOG_POSTS = [
 <tr><td>Heat pump water heater</td><td>$1,000</td><td>$1,000</td></tr>
 <tr><td>Ductless / mini-split (single zone)</td><td>$1,000 base</td><td>$1,250 / ton</td></tr>
 <tr><td>96%+ AFUE gas furnace</td><td>$250 (eligible only with simultaneous HP install or specific bundle)</td><td>N/A</td></tr>
-<tr><td>Smart thermostat (Ecobee / Nest / Honeywell)</td><td>$75 – $100</td><td>$75 – $100</td></tr>
+<tr><td>Smart thermostat (Ecobee / Nest)</td><td>$75 – $100</td><td>$75 – $100</td></tr>
 </tbody>
 </table>
 
@@ -2875,6 +2894,210 @@ BLOG_POSTS = [
 <p>No-heat right now? <a href="tel:+19054916943">Call us at (905) 491-6943</a> for emergency dispatch. We'll tell you a realistic ETA before we leave the shop.</p>
 """
     },
+    {
+        "slug": "ac-installation-cost-oakville-2026",
+        "cta_heading": "Get a Fixed AC Quote, Not a Guess",
+        "cta_copy": "Free on-site sizing and a fixed written price across Halton. No menu pricing, no pressure.",
+        "faq_heading": "Oakville AC Cost Questions",
+        "title": "How Much Does Air Conditioning Cost in Oakville? (2026 Installed Prices)",
+        "meta_title": "AC Installation Cost Oakville 2026 | Real Installed Prices | IKAD",
+        "description": "What central AC actually costs installed in Oakville in 2026, by size and tier, what drives the price, rebates, and why an oversized unit costs you twice.",
+        "date": "2026-05-20",
+        "image": "projects/ac-install-1.jpg",
+        "image_alt": "New central air conditioner condenser installed beside an Oakville home",
+        "excerpt": "A properly sized central AC installed in Oakville runs about $3,900 to $6,800 in 2026. Here's what sets the price, and why bigger is never better.",
+        "category": "Cost Guides",
+        "faqs": [
+            ("How much does central AC cost in Oakville in 2026?",
+             "Most Oakville homes land between $3,900 and $6,800 installed for a properly sized central air conditioner. Entry-level 14.3 SEER2 units are the low end; premium two-stage and variable-speed inverter systems are the top end. Correct sizing with a Manual J load calculation matters more to your comfort and bill than the brand on the box."),
+            ("Is a bigger air conditioner better?",
+             "No, and it is the single most common mistake we fix in Halton. An oversized AC cools the air quickly but shuts off before it pulls humidity out, so the house feels clammy at 22 degrees and the compressor short-cycles itself into an early failure. A right-sized unit runs longer, quieter cycles, dehumidifies properly, and lasts years longer."),
+            ("Should I replace my furnace and AC at the same time?",
+             "If both are 12 or more years old, usually yes. The indoor coil and blower are matched to the outdoor unit, the combined install is cheaper than two separate visits, and rebate stacking is better. See our 2026 furnace cost guide for the heating side.")
+        ],
+        "body": """
+<p>A properly sized central air conditioner installed in Oakville runs roughly <strong>$3,900 to $6,800</strong> in 2026. The spread comes down to three things: the size (tonnage) your home actually needs, the efficiency tier you choose, and what your existing setup requires at install time. Here is the honest breakdown, and why the cheapest quote and the biggest unit are both usually the wrong call.</p>
+
+<h2>2026 AC Installed Prices in Oakville, by Tier</h2>
+<table>
+<thead><tr><th>AC Type</th><th>Installed Price (Oakville 2026)</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Entry-level single-stage (14.3 SEER2)</td><td>$3,900 &ndash; $4,800</td><td>Tight budget, smaller homes, plan to sell soon</td></tr>
+<tr><td>Mid-tier single-stage (15&ndash;16 SEER2, York)</td><td>$4,600 &ndash; $5,600</td><td>Standard replacement, best value for most homes</td></tr>
+<tr><td>Two-stage (17&ndash;18 SEER2, York)</td><td>$5,400 &ndash; $6,400</td><td>Better humidity control, quieter operation</td></tr>
+<tr><td>Variable-speed inverter (18&ndash;20+ SEER2)</td><td>$6,200 &ndash; $8,200</td><td>Premium comfort, lowest running cost, tight homes</td></tr>
+<tr><td>Cold-climate heat pump (does AC + heating)</td><td>$7,500 &ndash; $13,000 (before rebates)</td><td>Cutting gas use, rebate stacking</td></tr>
+</tbody>
+</table>
+
+<h2>What Actually Drives the Price</h2>
+<p>Inside the same tier, quotes vary by $1,000 or more for real reasons:</p>
+<ul>
+<li><strong>Tonnage.</strong> A correctly sized 2-ton system costs less than an oversized 3.5-ton, and performs better. We run a Manual J load calculation instead of copying the nameplate of the old unit, which was very often oversized to begin with.</li>
+<li><strong>Line set and pad.</strong> Reusing a sound copper line set saves money; a new run, a longer run, or a nitrogen flush for a refrigerant change adds $200 to $600. We always level the pad before setting the condenser.</li>
+<li><strong>Electrical.</strong> A new disconnect, a whip, or a breaker to match the unit is $150 to $400 if your panel needs it.</li>
+<li><strong>Refrigerant type.</strong> 2026 systems use the newer low-GWP R-454B refrigerant. Matching a new coil to an old furnace is fine, but a very old A-coil sometimes needs replacing for compatibility.</li>
+<li><strong>Thermostat.</strong> A basic thermostat is included. An Ecobee or Nest with room sensors is a $300 to $450 upgrade.</li>
+</ul>
+
+<h2>Why an Oversized AC Is a Waste of Money</h2>
+<p>This is the mistake we correct most in Milton and Oakville subdivisions. A builder or a rushed contractor drops in a unit that is one to two tons too big. It blasts cold air, hits the thermostat in a few minutes, and shuts off, all before it has run long enough to pull moisture out of the air. The result is a house that feels cold and clammy at the same time, higher bills from constant on-off cycling, and a compressor that wears out early. A right-sized unit is quieter, drier, cheaper to run, and lasts longer. Sizing is free comfort, and we do it on every quote.</p>
+
+<h2>Rebates and When to Bundle</h2>
+<p>Straight AC replacements do not qualify for much, but a <a href="../ontario-heat-pump-rebates-2026/">cold-climate heat pump</a> can unlock up to $7,500 through the Home Renovation Savings Program plus the interest-free Canada Greener Homes Loan. If your furnace is also aging, bundling the two gets you a matched system and better rebate math. See our <a href="../furnace-cost-oakville-2026/">2026 furnace cost guide</a> and our <a href="../heat-pump-vs-furnace-ontario/">heat pump vs furnace comparison</a>.</p>
+
+<p>Want a fixed price for your specific home instead of a phone estimate? <a href="#hero-quote">Request a free AC quote</a> or <a href="tel:+19054916943">call (905) 491-6943</a>. We size it right the first time.</p>
+"""
+    },
+    {
+        "slug": "why-is-my-ac-not-cooling",
+        "cta_heading": "Still No Cool Air? We Dispatch Same-Day.",
+        "cta_copy": "Same-day no-cool service across Halton all summer. Call before the next heat wave.",
+        "faq_heading": "AC Not Cooling Questions",
+        "title": "Why Is My AC Not Cooling? 7 Causes (and Which You Can Fix Yourself)",
+        "meta_title": "AC Not Cooling? 7 Causes To Check Before Calling | IKAD Oakville",
+        "description": "Your AC runs but the house won't cool. The 7 most common causes in Halton homes, which you can fix in five minutes, and which need a technician.",
+        "date": "2026-06-10",
+        "image": "projects/ac-install-2.jpg",
+        "image_alt": "Technician checking an outdoor AC condenser unit in Oakville",
+        "excerpt": "AC running but the house won't cool? Work through these seven causes. About a third turn out to be something you can fix without a service call.",
+        "category": "Troubleshooting",
+        "faqs": [
+            ("My AC is running but blowing warm air, what is wrong?",
+             "Usually one of two things: a frozen evaporator coil from restricted airflow (dirty filter or closed vents), or low refrigerant from a leak. Set the system to fan-only for one to two hours to thaw the coil, replace the filter, then try again. If it blows warm a second time, it needs a technician."),
+            ("Why does my AC freeze up with ice on the lines?",
+             "Ice almost always means airflow is restricted or refrigerant is low. Turn the system off the moment you see ice, let it thaw for two to three hours, and replace the filter. If it re-freezes, stop running it and call us, running a frozen system can damage the compressor."),
+            ("How fast can IKAD get to a no-cool call in summer?",
+             "Usually within 2 to 4 hours during business hours across Oakville and Burlington, same day for the rest of Halton. We carry capacitors, contactors and common parts in the truck for one-trip repairs. Call (905) 491-6943.")
+        ],
+        "body": """
+<p>Your air conditioner is running, you can hear it, but the house just will not cool down. Before you book a service call, work through these seven causes. About a third of the no-cool calls we run in July turn out to be something a homeowner can fix in a few minutes.</p>
+
+<h2>1. Check the Thermostat</h2>
+<p>Set it to <strong>Cool</strong>, and set the fan to <strong>Auto</strong>, not On. Fan set to On runs the blower even when the AC is not actively cooling, which pushes room-temperature air through the vents and feels like warm air. Drop the setpoint 3 degrees below the current room temperature and listen for the outdoor unit to kick on.</p>
+
+<h2>2. Change the Filter</h2>
+<p>A clogged filter is the number-one cause of weak cooling and frozen coils. Restricted airflow starves the indoor coil, ice forms, and airflow drops to almost nothing. Pull the filter, and if you cannot see light through it, replace it.</p>
+
+<h2>3. Look for a Frozen Coil</h2>
+<p>If you see frost or ice on the copper lines at the outdoor unit or on the indoor coil, the system is iced up. Turn it <strong>off</strong> and let it thaw for two to three hours (fan-only mode speeds this up). Then replace the filter and open all the vents before restarting. If it freezes again, the cause is deeper, low refrigerant or a blower problem, and it needs a tech.</p>
+
+<h2>4. Clean the Outdoor Condenser</h2>
+<p>The outdoor unit sheds heat through its fins. If it is packed with grass clippings, cottonwood fluff, or leaves, it cannot dump heat and the house will not cool. Cut power at the disconnect, and gently rinse the fins from the inside out with a garden hose. Keep two feet of clearance around the unit.</p>
+
+<h2>5. Check the Breaker and Disconnect</h2>
+<p>Central AC uses two power sources: a breaker in your panel and a disconnect box outside near the condenser. If the indoor fan runs but the outdoor unit is dead, check both. If the breaker trips again right after resetting, stop, that is an electrical fault to leave to us.</p>
+
+<h2>6. Check the Condensate Drain</h2>
+<p>Many systems have a safety float switch that shuts off cooling if the condensate drain backs up, to prevent water damage. If your AC quit on a humid day, look for a clogged drain line or a full drain pan and clear it.</p>
+
+<h2>7. Suspect Low Refrigerant</h2>
+<p>If the filter is clean, the coil keeps freezing, or cooling has slowly gotten weaker over a couple of seasons, you likely have a refrigerant leak. Refrigerant is not consumed, it leaks, so topping it up without finding the leak is a temporary fix. This is a diagnosis-and-repair job, not DIY.</p>
+
+<h2>When to Call</h2>
+<p>If you have worked through this list and the house still will not cool, or you see ice, hear the compressor humming without starting, or smell anything burning, shut it down and call us. Running a struggling AC risks a compressor failure, which is the expensive part. <a href="#hero-quote">Request same-day service</a> or <a href="tel:+19054916943">call (905) 491-6943</a>. See also our <a href="../ac-installation-cost-oakville-2026/">2026 AC cost guide</a> if a replacement is on the table.</p>
+"""
+    },
+    {
+        "slug": "boiler-vs-furnace-halton",
+        "cta_heading": "Not Sure Which System Fits Your Home?",
+        "cta_copy": "We assess your existing setup and tell you straight, no upsell. Free consults across Halton.",
+        "faq_heading": "Boiler vs Furnace Questions",
+        "title": "Boiler vs Furnace: Which Is Right for Your Halton Home?",
+        "meta_title": "Boiler vs Furnace Halton | Which Heating System Is Right | IKAD",
+        "description": "Boiler vs furnace for Oakville and Burlington homes: how each heats, the comfort and cost differences, and which makes sense for heritage vs modern builds.",
+        "date": "2026-04-15",
+        "image": "services/commercial-boilers.jpg",
+        "image_alt": "High-efficiency condensing boiler installed by IKAD Mechanical in Halton",
+        "excerpt": "Forced-air furnace or hot-water boiler? They heat very differently. Here is how to tell which one fits your Halton home, budget and comfort priorities.",
+        "category": "Comparison Guides",
+        "faqs": [
+            ("Is a boiler or a furnace cheaper to install?",
+             "A furnace is almost always cheaper up front. A high-efficiency gas furnace installed in Halton runs $3,800 to $6,500, while a condensing boiler system is typically $7,000 to $12,000+ because of the piping, pumps and manifolds. Boilers can cost less to run and last longer, but the install is more involved."),
+            ("Can I switch from a boiler to a furnace, or the other way?",
+             "Yes, but it is a significant job. Going boiler-to-furnace means adding full ductwork, which is invasive in a finished home. Furnace-to-boiler means running hydronic piping and radiators or in-floor loops. More often we modernize what you have, for example a heritage boiler-to-condensing-boiler upgrade that keeps your existing radiators."),
+            ("Which is better for a heritage home in Old Oakville?",
+             "If the home already has cast-iron radiators and no ductwork, keep and modernize the boiler, it delivers the even, draft-free heat those homes are known for. Adding forced air means tearing into plaster walls. We do both, but we will tell you honestly which is the better value for your house.")
+        ],
+        "body": """
+<p>Most Halton homes heat with a forced-air gas furnace, but a meaningful share of older Oakville and Burlington homes run on hot-water boilers. They are very different systems, and the right choice depends on what your home already has, how you want it to feel, and your budget. Here is the straight comparison.</p>
+
+<h2>How a Furnace Heats</h2>
+<p>A furnace burns natural gas to heat air, then a blower pushes that warm air through ducts to registers in every room. It is fast, it shares its ductwork with your central AC, and it is the cheaper system to install and replace. The trade-offs: it moves air (and some dust) around, and heat can feel less even than radiant. Today's <a href="../furnace-cost-oakville-2026/">high-efficiency furnaces</a> hit 95 to 98 percent AFUE. We install York, Luxaire and Coleman, all part of the same Johnson Controls family, so parts and service stay consistent across the tiers.</p>
+
+<h2>How a Boiler Heats</h2>
+<p>A boiler heats water, not air, and circulates it through radiators, baseboards, or in-floor tubing. The heat is radiant and even, no blowing air, no ducts, very quiet, and it holds a comfortable, draft-free warmth that many people prefer. Modern condensing boilers are extremely efficient. The downsides: higher install cost, no shared ductwork for AC (you would add a separate system or ductless), and slower response when you change the setpoint.</p>
+
+<h2>Comfort and Air Quality</h2>
+<p>Radiant boiler heat wins on evenness and quiet, and it does not stir up dust, which people with allergies notice. Forced air wins on speed and on integrating cooling, filtration, humidification and ventilation into one duct system. If indoor air quality is a priority and you are on forced air, pair it with good filtration and an <a href="../../air-balancing/">air balance</a>.</p>
+
+<h2>Cost: Install and Running</h2>
+<p>A furnace is cheaper to install ($3,800 to $6,500 in Halton) and simple to replace. A condensing boiler system costs more up front ($7,000 to $12,000+) because of the pumps, piping and manifolds, but can run efficiently and last longer, often 20+ years. If you are building or renovating and want in-floor radiant, a boiler is the natural heart of that system, see our <a href="../../in-floor-heating/">in-floor heating page</a>.</p>
+
+<h2>Which Should You Choose?</h2>
+<ul>
+<li><strong>Modern or forced-air home:</strong> stick with a high-efficiency furnace, or add a hybrid heat pump. It is the best value and integrates cooling.</li>
+<li><strong>Heritage home with radiators:</strong> keep and modernize the boiler. Upgrading a tired boiler to a condensing unit while keeping your radiators preserves the comfort those homes are built around.</li>
+<li><strong>New custom build:</strong> many of our Halton custom homes use both, forced air upstairs for AC and quick response, hydronic in-floor below. See our <a href="../../custom-homes/">custom home HVAC page</a>.</li>
+</ul>
+
+<p>Not sure which path is the better value for your home? <a href="#hero-quote">Request a free consult</a> or <a href="tel:+19054916943">call (905) 491-6943</a>. We are <a href="../../about/">TSSA-certified</a> for both furnace and boiler work, so our advice is not steered by what we would rather sell you.</p>
+"""
+    },
+    {
+        "slug": "lower-heating-bill-ontario",
+        "cta_heading": "Want a Lower Gas Bill Next Winter?",
+        "cta_copy": "From a tune-up to a full upgrade, we'll show you the payback math first. Free quotes across Halton.",
+        "faq_heading": "Lowering Your Heating Bill, Questions",
+        "title": "9 Ways to Lower Your Ontario Heating Bill This Winter",
+        "meta_title": "How To Lower Your Ontario Heating Bill | 9 Real Fixes | IKAD",
+        "description": "Nine proven ways to cut your Halton heating bill, from setbacks and duct sealing to a 96%+ furnace and hybrid heat pump, ranked by real impact.",
+        "date": "2026-02-28",
+        "image": "services/heating-2.jpg",
+        "image_alt": "IKAD Mechanical technician servicing a high-efficiency furnace in Oakville",
+        "excerpt": "Your winter gas bill is mostly under your control. Here are nine ways to cut it, ranked by real impact, from a five-minute change to a full system upgrade.",
+        "category": "Efficiency",
+        "faqs": [
+            ("What is the single biggest way to lower my heating bill?",
+             "If your furnace is 18+ years old, replacing it with a 96%+ AFUE unit is the biggest lever, an old 80% furnace wastes roughly one dollar in five. After that, sealing duct leaks and using scheduled thermostat setbacks give the best return for the least money."),
+            ("Do smart thermostats actually save money?",
+             "Yes, usually $80 to $200 a year, mostly from automatic setbacks while you are asleep or out. The savings shrink if your old thermostat was already well programmed. We install Ecobee and Nest; the bigger win is often comfort and visibility into when your system runs."),
+            ("Is a heat pump cheaper to run than a gas furnace in Ontario?",
+             "At moderate temperatures, yes, a cold-climate heat pump is two to three times more efficient. Below about -10 to -15 degrees it becomes less efficient, which is why most Halton homes run a hybrid: heat pump most of the winter, gas furnace on the coldest days. See our heat pump vs furnace guide.")
+        ],
+        "body": """
+<p>Your winter gas and hydro bills are mostly within your control. Here are nine ways to bring them down, ranked roughly by impact, from a change you can make in five minutes to a full system upgrade. Most Halton homes can knock 10 to 30 percent off with the first few.</p>
+
+<h2>1. Replace a Furnace Older Than 18 Years</h2>
+<p>This is the biggest lever. An old 80% AFUE furnace turns roughly one gas dollar in five into nothing. A modern 96 to 98% <a href="../furnace-cost-oakville-2026/">high-efficiency furnace</a> (we install York, Luxaire and Coleman) captures nearly all of it. On an average Oakville gas bill, that alone is a meaningful monthly drop.</p>
+
+<h2>2. Use Scheduled Setbacks</h2>
+<p>Every 1 degree you lower the thermostat over a full day saves roughly 2 to 3 percent on heating. Set it to 21 when you are home and awake, 18 overnight and when the house is empty. A smart thermostat does this automatically.</p>
+
+<h2>3. Add a Smart Thermostat</h2>
+<p>An Ecobee or Nest with room sensors handles setbacks for you and pre-warms before you get home. Most homeowners save $80 to $200 a year, plus you get real visibility into when your system runs.</p>
+
+<h2>4. Seal Your Duct Leaks</h2>
+<p>The typical Halton home loses 20 to 30 percent of its heated air through unsealed duct seams in the attic and basement, that is heated air dumped into a roof cavity in February. Sealing usually pays back in one to two winters. See our <a href="../../duct-work/">duct work page</a>.</p>
+
+<h2>5. Change the Filter on Schedule</h2>
+<p>A clogged filter makes the blower work harder and can trigger safety lockouts. Check 1-inch filters monthly, media filters every 6 to 12 months. It is the cheapest efficiency habit there is.</p>
+
+<h2>6. Get an Annual Furnace Tune-Up</h2>
+<p>A dirty, out-of-tune furnace burns more gas and fails sooner. About 80 percent of the January no-heat calls we run are on systems that have not been serviced in three or more years. A fall tune-up keeps efficiency up and catches small problems cheap.</p>
+
+<h2>7. Balance Your Air</h2>
+<p>If some rooms are roasting while others are freezing, you are overheating the whole house to make the cold room bearable. <a href="../../air-balancing/">Air balancing</a> evens it out so you can run a lower setpoint comfortably. See our guide on <a href="../upstairs-too-hot-too-cold/">uneven two-storey temperatures</a>.</p>
+
+<h2>8. Consider a Hybrid Heat Pump</h2>
+<p>Adding a cold-climate heat pump to your next AC replacement lets it handle most of the winter at two to three times the efficiency of gas, with the furnace taking over only on the coldest days. Rebates make the math better, see our <a href="../ontario-heat-pump-rebates-2026/">2026 rebate guide</a> and <a href="../heat-pump-vs-furnace-ontario/">heat pump vs furnace comparison</a>.</p>
+
+<h2>9. Fix the Envelope Basics</h2>
+<p>Weatherstrip doors, seal obvious drafts, and make sure attic insulation is adequate. HVAC can only be as efficient as the box it is heating. These low-cost fixes reduce the load your system has to meet in the first place.</p>
+
+<p>Want us to show you the payback on any of these for your specific home? <a href="#hero-quote">Request a free assessment</a> or <a href="tel:+19054916943">call (905) 491-6943</a>.</p>
+"""
+    },
 ]
 
 def build_blog_post(post):
@@ -2905,7 +3128,7 @@ def build_blog_post(post):
         "author": {
             "@type":"Person",
             "@id": f"{BASE}/about/#owner",
-            "name":"Mohanad",
+            "name":"Ahmad",
             "jobTitle":"Owner & Lead Technician, IKAD Mechanical",
             "worksFor": {"@id": f"{BASE}/#business"},
             "url": f"{BASE}/about/",
@@ -3008,7 +3231,7 @@ def build_blog_post(post):
     body = hero_compact(r, "hero/hero-ikad-team.jpg", post["category"], post["title"], post["excerpt"]) + \
         breadcrumbs(r, [("Home","./"),("Blog","blog/"),(post["title"][:50] + "…", "")]) + f"""
 <article class="section"><div class="container" style="max-width:780px">
-<p style="color:#64748b;font-size:.92rem;margin-bottom:.5rem"><time datetime="{post["date"]}" itemprop="datePublished">{post["date"]}</time> · <a href="{r}about/#owner" style="color:#64748b">By Mohanad, Owner &amp; Lead Technician, IKAD Mechanical</a> · {post["category"]}</p>
+<p style="color:#64748b;font-size:.92rem;margin-bottom:.5rem"><time datetime="{post["date"]}" itemprop="datePublished">{post["date"]}</time> · <a href="{r}about/#owner" style="color:#64748b">By Ahmad, Owner &amp; Lead Technician, IKAD Mechanical</a> · {post["category"]}</p>
 <p style="color:#64748b;font-size:.85rem;margin:0 0 1rem;padding:.4rem .8rem;background:#f6f7f9;border-radius:6px;display:inline-block"><strong>Reviewed:</strong> 2026-05-21 · This article is reviewed periodically. Pricing and rebate amounts current as of the date shown.</p>
 <img src="{r}assets/images/{post["image"]}" alt="{post["image_alt"]}" style="width:100%;border-radius:10px;margin-bottom:2rem" width="900" height="600">
 {body_html}
@@ -3029,7 +3252,7 @@ def build_blog_post(post):
 
 <hr style="margin:2.5rem 0;border:0;border-top:1px solid #e5e7eb">
 <div style="background:#f6f7f9;border-radius:10px;padding:1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between" itemscope itemtype="https://schema.org/Person">
-<div><strong itemprop="name">Mohanad</strong> <span style="color:#64748b"> <span itemprop="jobTitle">Owner &amp; Lead Technician, IKAD Mechanical</span></span><br><span style="color:#64748b;font-size:.9rem">TSSA-certified gas fitter (G2), HRAI member, 15+ years installing HVAC across Halton. The name customers mention in <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">HomeStars reviews</a>. Read his full bio on <a href="{r}about/#owner" itemprop="url">the About page</a>.</span></div>
+<div><strong itemprop="name">Ahmad</strong> <span style="color:#64748b"> <span itemprop="jobTitle">Owner &amp; Lead Technician, IKAD Mechanical</span></span><br><span style="color:#64748b;font-size:.9rem">TSSA-certified gas fitter (G1), HRAI member, 15+ years installing HVAC across Halton. The name customers mention in <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">HomeStars reviews</a>. Read his full bio on <a href="{r}about/#owner" itemprop="url">the About page</a>.</span></div>
 <a class="btn btn--primary" href="{r}contact/">Get Your Free Quote</a>
 </div>
 
@@ -3074,19 +3297,19 @@ FAQ_GROUPS = [
         ("Are you an HVAC contractor near me in Burlington / Milton / Mississauga / Hamilton?",
          "Yes. Our shop is on Upper Middle Rd East in Oakville and we service the full Halton Region, plus Mississauga, Hamilton and Brampton. Burlington is 15-25 minutes from our shop, Milton 20-30 minutes, Mississauga 15-35 minutes, Hamilton 25-45 minutes, Brampton 30-45 minutes. No travel surcharge to any of these cities. See per-city details on <a href=\"../service-areas/\">our service area pages</a>."),
         ("Is IKAD a trusted family-owned HVAC contractor?",
-         "Yes. IKAD Mechanical has been family-owned and operated since 2010. The owner answers the phone, runs site visits, and is on most install jobs. No commissioned salespeople, no franchise model, no subcontracted installs. We're TSSA G2/G3 certified, ECRA/ESA licensed, HRAI members, carry $5M liability insurance and WSIB. Read our <a href=\"../about/\">story</a>."),
+         "Yes. IKAD Mechanical has been family-owned and operated since 2010. The owner answers the phone, runs site visits, and is on most install jobs. No commissioned salespeople, no franchise model, no subcontracted installs. We're TSSA G1/G2 certified, ECRA/ESA licensed, HRAI members, carry $5M liability insurance and WSIB. Read our <a href=\"../about/\">story</a>."),
         ("Do you offer same-day or emergency HVAC service near me?",
          "Same-day no-heat and no-cool service is typical for Oakville and Burlington during business hours, often within 2-4 hours of your call. Other Halton cities (Milton, Halton Hills) and Peel/Hamilton are typically same-day or next-day. We keep emergency dispatch slots open every winter and summer. Call (905) 491-6943 or <a href=\"../contact/\">request urgent service online</a>."),
         ("How do I find honest HVAC contractor reviews in Halton?",
          "Three reliable sources: (1) Google Business Profile (search 'IKAD Mechanical Oakville'), where reviews can't be filtered by the business, (2) HomeStars, where reviewers are verified, see <a href=\"https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling\" rel=\"noopener\" target=\"_blank\">our HomeStars profile</a>, and (3) the BBB. Avoid contractor-website testimonials in isolation, anyone can curate those."),
         ("Are you a licensed and certified HVAC contractor near me?",
-         "Yes. TSSA G2 gas fitting (commercial scope), TSSA G3 (residential), ECRA/ESA electrical licensing, HRAI membership, $5M general liability insurance, WSIB coverage. Documentation is shareable on request, ask at quote stage if you'd like copies."),
+         "Yes. TSSA G1 gas fitting (commercial scope), TSSA G2 (residential), ECRA/ESA electrical licensing, HRAI membership, $5M general liability insurance, WSIB coverage. Documentation is shareable on request, ask at quote stage if you'd like copies."),
     ]),
     ("Hiring an HVAC Contractor", [
         ("How do I choose a good HVAC contractor in Halton?",
          "Three questions answer most of it: are they TSSA-certified gas fitters (mandatory for any gas work in Ontario), are they ECRA/ESA licensed (electrical), and do they have a verifiable HRAI membership or BBB profile. Then ask whether they do a Manual J load calculation, whether installs are done by their own crew or subcontractors, and whether the workmanship warranty is written into the contract. If any of those answers are vague, keep looking, <a href=\"../about/\">see IKAD's certifications and credentials</a>."),
         ("Are you licensed and insured?",
-         "Yes. IKAD Mechanical holds TSSA gas-fitting certifications (G2 and G3), ECRA/ESA electrical licensing, and HRAI membership. We carry $5M liability insurance and WSIB coverage on every job site. We can share certificates of insurance and license numbers with property managers and builders on request, <a href=\"../contact/\">contact us</a> for the documents."),
+         "Yes. IKAD Mechanical holds TSSA gas-fitting certifications (G1 and G2), ECRA/ESA electrical licensing, and HRAI membership. We carry $5M liability insurance and WSIB coverage on every job site. We can share certificates of insurance and license numbers with property managers and builders on request, <a href=\"../contact/\">contact us</a> for the documents."),
         ("Do you charge for diagnostic service calls?",
          "Yes, diagnostic visits are $145–$185 during business hours and $250–$350 after hours or on weekends. That covers the technician's travel, time on site, and a written diagnosis. If you proceed with the repair or install, we credit the diagnostic fee against the work."),
         ("Will the same technician do my installation?",
@@ -3156,15 +3379,15 @@ FAQ_GROUPS = [
         ("What is an HRV and do I actually need one?",
          "Heat Recovery Ventilator, a device that brings fresh outdoor air into the home while recovering 70–80% of the heat from the air being exhausted. In a tight modern Halton home (post-2010 build, or a deeply weatherized older home), an HRV is required by code and important for indoor air quality. In a leaky 1970s home, you're getting the same effect through every window, adding one is overkill. We commission HRVs as part of our <a href=\"../custom-homes/\">custom home mechanical packages</a> and <a href=\"../air-balancing/\">air balancing</a> service."),
         ("What humidity level should my home be at?",
-         "30–40% in winter, 45–55% in summer. Below 30% in winter you get static, sore throats, and cracked wood; above 45% in winter you get condensation on windows. Most Halton homes need a whole-home humidifier (Aprilaire 600 is our go-to) in winter and a working AC plus possibly a dehumidifier in summer."),
+         "30–40% in winter, 45–55% in summer. Below 30% in winter you get static, sore throats, and cracked wood; above 45% in winter you get condensation on windows. Most Halton homes need a whole-home humidifier (Aprilaire 700 and 800 are our go-to) in winter and a working AC plus possibly a dehumidifier in summer."),
         ("Do air purifiers actually work?",
-         "Yes, for what they're designed to do, capture airborne particulates and some VOCs. They don't replace ventilation (an HRV does that) or solve a moisture problem. We install whole-home Aprilaire and HoneywellAir units that work with your existing ductwork; portable HEPA units are fine but only clean the room they're in."),
+         "Yes, for what they're designed to do, capture airborne particulates and some VOCs. They don't replace ventilation (an HRV does that) or solve a moisture problem. We install whole-home Aprilaire units that work with your existing ductwork; portable HEPA units are fine but only clean the room they're in."),
         ("Are UV lights for HVAC worth it?",
          "Mixed verdict, honestly. UV-C at the coil is genuinely useful for stopping mold growth on the evaporator (especially in humid summers). UV-C installed in-duct for 'sterilizing air' has weaker evidence, air moves too fast through the chamber for full sterilization. We'll install one if you ask, but we don't recommend it as a default upgrade."),
     ]),
     ("Smart Thermostats &amp; Tech", [
         ("Which smart thermostat works best in Ontario?",
-         "Ecobee Premium (with the room sensors) is what we install most often in Halton. Excellent integration with Enbridge HER+ rebates, smart-home compatibility, and the Ontario time-of-use schedule support. Nest is a close second, slightly prettier UI, slightly less compatibility with multi-stage modulating equipment. Honeywell T-series is fine and cheaper if you don't need room sensors."),
+         "Ecobee Premium (with the room sensors) is what we install most often in Halton. Excellent integration with Enbridge HER+ rebates, smart-home compatibility, and the Ontario time-of-use schedule support. Nest is a close second, slightly prettier UI, slightly less compatibility with multi-stage modulating equipment."),
         ("Can I install a smart thermostat myself?",
          "If you have a C-wire (look for a 'C' terminal on your existing thermostat with a wire attached), yes, it's a 20-minute job. If you don't have a C-wire (common in older Halton homes), DIY gets tricky and requires a power-extender kit or pulling a new wire. We install thermostats for $185–$285 including the unit when bundled with other work."),
         ("Will a smart thermostat actually save me money?",
@@ -3190,13 +3413,13 @@ FAQ_GROUPS = [
         ("Is there a trusted HVAC contractor near me in Oakville?",
          "Yes, IKAD Mechanical is based at 2275 Upper Middle Rd E in Oakville. We've served the town since 2010 with 1,200+ Halton homes. Same-day, often same-hour response across <a href=\"../service-areas/oakville/\">all Oakville neighborhoods</a> including Glen Abbey, Bronte, Joshua Creek and Old Oakville."),
         ("How much does a furnace cost in Oakville in 2026?",
-         "Most Oakville furnace replacements installed are $3,800 to $7,200. Single-stage 95% AFUE is the budget end, modulating 98% is the top end. See our <a href=\"../blog/furnace-cost-oakville-2026/\">brand-by-brand 2026 pricing guide</a> for the full breakdown."),
+         "Most Oakville furnace replacements installed are $3,800 to $6,500. Single-stage 95% AFUE is the budget end, modulating 98% is the top end. See our <a href=\"../blog/furnace-cost-oakville-2026/\">brand-by-brand 2026 pricing guide</a> for the full breakdown."),
         ("Which Oakville neighborhoods does IKAD work in most?",
          "Glen Abbey, Joshua Creek, Bronte and Old Oakville top the list, plus rapid growth in The Preserve, West Oak Trails, and Palermo West. Every Oakville postal code is within 5 to 15 minutes of our Upper Middle Rd East shop, see <a href=\"../service-areas/oakville/\">our Oakville HVAC page</a> for full neighborhood detail."),
     ]),
     ("HVAC in Burlington", [
         ("Is there a trusted HVAC contractor near me in Burlington?",
-         "Yes, IKAD Mechanical is 15-25 minutes away in Oakville and is in <a href=\"../service-areas/burlington/\">Burlington</a> multiple days a week. Family-owned since 2010, TSSA G2/G3 certified, HRAI member. We serve Aldershot, Roseland, Headon Forest, Tyandaga, Alton Village, Mt Nemo, Lowville, Kilbride and downtown Burlington."),
+         "Yes, IKAD Mechanical is 15-25 minutes away in Oakville and is in <a href=\"../service-areas/burlington/\">Burlington</a> multiple days a week. Family-owned since 2010, TSSA G1/G2 certified, HRAI member. We serve Aldershot, Roseland, Headon Forest, Tyandaga, Alton Village, Mt Nemo, Lowville, Kilbride and downtown Burlington."),
         ("Which heat pump works best in Burlington's climate?",
          "Mitsubishi Hyper-Heat is our most-installed cold-climate heat pump in Burlington (best low-temp performance). Daikin Aurora and Lennox SL25XPV are also strong. Best paired with a gas furnace in a <a href=\"../blog/heat-pump-vs-furnace-ontario/\">hybrid configuration</a> for Halton winters."),
         ("Does IKAD do snow melt for north Burlington driveways?",
@@ -3347,6 +3570,12 @@ def build_glossary():
 </div></section>
 """ + cta_banner(r, "Have An HVAC Question?", f"We answer plain-English questions about HVAC in Halton every day. Get a free quote or just ask.")
 
+    pg_faqs = [
+        ("What HVAC terms should I know before getting a quote?", "The big ones are AFUE (furnace efficiency), SEER2 (AC efficiency), BTU (heating and cooling capacity), and Manual J (the load calculation that sizes your equipment). All are defined above."),
+        ("What is a Manual J load calculation?", "It is the industry-standard calculation of exactly how much heating and cooling your specific home needs, based on size, insulation, windows and orientation. We run one on every install so equipment is sized correctly, not just copied from the old unit."),
+        ("What AFUE and SEER2 should I aim for in Ontario?", "For furnaces, 95 to 98% AFUE is the current high-efficiency tier. For air conditioners, 14.3 SEER2 is the code minimum and 15 to 18+ SEER2 is where the running-cost savings are."),
+    ]
+    body = body + faq_block(pg_faqs, "HVAC Terms, Quick Questions") + faq_schema(pg_faqs)
     page(
         out="glossary/index.html", depth=1,
         title=f"HVAC Glossary | {len(GLOSSARY_TERMS)} Terms Explained | IKAD Oakville",
@@ -3371,7 +3600,7 @@ TESTIMONIALS = [
      "text":"A big thank you to IKAD Mechanical for a very quick response, within 2 hours of our call. Both my wife and I highly recommend their services."},
     {"author":"R.K.","initials":"RK","rating":5,"source":"HomeStars","city":"Mississauga",
      "service":"Commercial AC install + PM contract",
-     "text":"Mohanad and his team were personable and patient with all our questions through the sales process. Competitive pricing and honest. We've made IKAD our go-to for all our restaurant's HVAC."},
+     "text":"Ahmad and his team were personable and patient with all our questions through the sales process. Competitive pricing and honest. We've made IKAD our go-to for all our restaurant's HVAC."},
     {"author":"S.M.","initials":"SM","rating":5,"source":"Google","city":"Oakville",
      "service":"Hybrid heat pump install",
      "text":"IKAD did the Manual J load calc on our house and ended up recommending a smaller unit than three other quotes. Our gas bill is way down and the house feels more even. They were upfront about every cost."},
@@ -3469,7 +3698,7 @@ def build_reviews_page():
 <li><strong>Fast response times.</strong> Same-day or within 2 hours is the most common response-time mention in Oakville and Burlington reviews.</li>
 <li><strong>Right-sized equipment.</strong> Multiple reviewers mention that IKAD recommended a smaller unit than competitors and the result was lower bills and better comfort.</li>
 <li><strong>Clean install work.</strong> "Tidy", "professional" and "explained everything" are recurring words across reviews.</li>
-<li><strong>Owner involvement.</strong> Mohanad is named by reviewers as personally involved in quotes and follow-up.</li>
+<li><strong>Owner involvement.</strong> Ahmad is named by reviewers as personally involved in quotes and follow-up.</li>
 </ul>
 </div>
 
@@ -3494,6 +3723,12 @@ def build_reviews_page():
 </div></section>
 """ + cta_banner(r, "Ready To Join Our Reviewers?", "Get a free no-pressure quote from a TSSA-certified, family-owned Halton HVAC contractor.")
 
+    pg_faqs = [
+        ("Where can I read verified IKAD reviews?", "On Google Business Profile (search IKAD Mechanical Oakville), on HomeStars where reviewers are verified, and on the BBB. We link our <a href='https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling' rel='noopener' target='_blank'>HomeStars profile</a> throughout the site."),
+        ("How does IKAD handle a problem after the install?", "If something needs a second visit, we come back, callbacks are not billable. We built the business on getting it right the first time and standing behind the work."),
+        ("Is IKAD really family-owned?", "Yes, family-owned and operated since 2010 by Ahmad. No commissioned salespeople, no franchise model, no subcontracted installs."),
+    ]
+    body = body + faq_block(pg_faqs, "Reviews &amp; Reputation Questions") + faq_schema(pg_faqs)
     page(
         out="reviews/index.html", depth=1,
         title=f"IKAD Mechanical Reviews | {avg_rating:.1f}/5 from {review_count}+ Halton Customers",
@@ -3511,9 +3746,9 @@ def build_why_choose_ikad():
 
     why_faqs = [
         ("Is IKAD Mechanical the best HVAC contractor in Oakville?",
-         "We've served 1,200+ Halton homes since 2010 and consistently get 5-star reviews on HomeStars and Google. We're TSSA G2/G3 certified, ECRA/ESA licensed, HRAI members, and we carry $5M liability insurance plus WSIB coverage. We're an Oakville-based family-owned business with no commissioned salespeople and no subcontracted installs. Compare us against any local contractor on those criteria."),
+         "We've served 1,200+ Halton homes since 2010 and consistently get 5-star reviews on HomeStars and Google. We're TSSA G1/G2 certified, ECRA/ESA licensed, HRAI members, and we carry $5M liability insurance plus WSIB coverage. We're an Oakville-based family-owned business with no commissioned salespeople and no subcontracted installs. Compare us against any local contractor on those criteria."),
         ("How is IKAD different from a chain or franchise HVAC contractor?",
-         "Three real differences. (1) Owner-operator model: Mohanad answers the phone, runs site visits, and is on most install jobs. No commissioned salesperson layer adding 30% to your quote. (2) Manual J load calculation on every install (most chain installers skip this and copy the old nameplate). (3) Fixed-price written quotes, not 'estimates' that grow mid-job."),
+         "Three real differences. (1) Owner-operator model: Ahmad answers the phone, runs site visits, and is on most install jobs. No commissioned salesperson layer adding 30% to your quote. (2) Manual J load calculation on every install (most chain installers skip this and copy the old nameplate). (3) Fixed-price written quotes, not 'estimates' that grow mid-job."),
         ("What does IKAD guarantee?",
          "Equipment manufacturer warranties (typically 10 years parts, 5-10 years compressor on AC and heat pumps, lifetime heat exchanger on most furnaces), plus our 2-year workmanship warranty on every install. If we install it and it fails because of how we installed it, we fix it free."),
         ("Does IKAD offer financing on residential HVAC?",
@@ -3530,7 +3765,7 @@ def build_why_choose_ikad():
         breadcrumbs(r, [("Home","./"),("Why Choose IKAD", "")]) + f"""
 <section class="section"><div class="container" style="max-width:980px">
 
-<aside class="answer-box" role="complementary"><span class="answer-box__label">Quick Answer</span><h2>Why Halton Homeowners Pick IKAD Mechanical</h2><p>IKAD Mechanical is a family-owned HVAC contractor in Oakville, Ontario, founded in 2010. We're TSSA G2/G3 certified, ECRA/ESA licensed, HRAI members, carry $5M liability insurance and WSIB coverage, and have served 1,200+ Halton homes. We do not use commissioned salespeople. We do not subcontract installs. We run Manual J load calculations on every install. We give fixed-price written quotes. We have 5-star reviews on HomeStars and Google.</p></aside>
+<aside class="answer-box" role="complementary"><span class="answer-box__label">Quick Answer</span><h2>Why Halton Homeowners Pick IKAD Mechanical</h2><p>IKAD Mechanical is a family-owned HVAC contractor in Oakville, Ontario, founded in 2010. We're TSSA G1/G2 certified, ECRA/ESA licensed, HRAI members, carry $5M liability insurance and WSIB coverage, and have served 1,200+ Halton homes. We do not use commissioned salespeople. We do not subcontract installs. We run Manual J load calculations on every install. We give fixed-price written quotes. We have 5-star reviews on HomeStars and Google.</p></aside>
 
 <h2 style="margin-top:2.5rem">IKAD vs A Typical Halton HVAC Contractor</h2>
 <p>If you're comparing quotes from multiple HVAC contractors, here's the apples-to-apples comparison that matters:</p>
@@ -3544,7 +3779,7 @@ def build_why_choose_ikad():
 <tr><td>Sales model</td><td>Owner-led, no commissioned salespeople</td><td>Commissioned salespeople common</td></tr>
 <tr><td>Manual J load calc</td><td>On every install</td><td>Frequently skipped</td></tr>
 <tr><td>Quote model</td><td>Fixed written quote</td><td>"Estimated" that grows</td></tr>
-<tr><td>TSSA G2 + G3</td><td>Both certified</td><td>Required by law (verify)</td></tr>
+<tr><td>TSSA G1 + G2</td><td>Both certified</td><td>Required by law (verify)</td></tr>
 <tr><td>ECRA / ESA</td><td>Licensed</td><td>Often subcontracted electrical</td></tr>
 <tr><td>HRAI membership</td><td>Yes</td><td>Varies</td></tr>
 <tr><td>Liability insurance</td><td>$5,000,000</td><td>Varies, ask to see certificate</td></tr>
@@ -3563,10 +3798,10 @@ def build_why_choose_ikad():
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem;margin:1.5rem 0">
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">1. Right-sized equipment, every time</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">We run a <a href="{r}glossary/#manual-j">Manual J load calculation</a> on every furnace and AC install. Most Halton homes have furnaces 30-50% oversized because the previous contractor just copied the old nameplate. Right-sized equipment runs longer cycles, quieter, lasts 5+ years longer.</p></div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">2. Fixed-price written quote</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">Every IKAD quote is itemized, equipment model number, capacity, all materials, labour, removal of old equipment, permits, and a fixed total. Not an "estimate" that grows. If we find something unexpected after we open the wall, we tell you before doing the work.</p></div>
-<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">3. Owner on every install</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">Mohanad personally answers the phone, runs site visits and is on most install jobs. There is no commissioned salesperson layer adding 30% to your quote. The person who quotes you is the person responsible for the install.</p></div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">3. Owner on every install</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">Ahmad personally answers the phone, runs site visits and is on most install jobs. There is no commissioned salesperson layer adding 30% to your quote. The person who quotes you is the person responsible for the install.</p></div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">4. Real same-day response</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">Same-day for no-heat / no-cool emergencies in Oakville and Burlington during business hours, often within 2 hours. We don't oversell this — see our <a href="{r}reviews/">customer reviews</a>, multiple ones name the actual response time they got.</p></div>
 <div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">5. We handle the paperwork</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem">Town of Oakville (or your city's) mechanical permit, TSSA inspection, ECRA/ESA electrical sign-off, Home Renovation Savings Program rebate filing, Canada Greener Homes Loan registration. All filed by us. <a href="{r}blog/ontario-heat-pump-rebates-2026/">See the 2026 rebate breakdown.</a></p></div>
-<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">Our certifications</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem"><a href="{r}glossary/#tssa">TSSA</a> G2 (commercial gas fitting) and G3 (residential), <a href="{r}glossary/#ecra">ECRA</a> / <a href="{r}glossary/#esa">ESA</a> electrical contractor license, <a href="{r}glossary/#hrai">HRAI</a> membership, $5M general liability insurance, <a href="{r}glossary/#wsib">WSIB</a> coverage. Documentation shareable on request. <a href="{r}about/">Full credentials on the About page.</a></p></div>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.5rem"><h3 style="margin:0 0 .5rem;color:#0f172a">Our certifications</h3><p style="margin:0;color:#475569;line-height:1.65;font-size:.95rem"><a href="{r}glossary/#tssa">TSSA</a> G1 (commercial gas fitting) and G2 (residential), <a href="{r}glossary/#ecra">ECRA</a> / <a href="{r}glossary/#esa">ESA</a> electrical contractor license, <a href="{r}glossary/#hrai">HRAI</a> membership, $5M general liability insurance, <a href="{r}glossary/#wsib">WSIB</a> coverage. Documentation shareable on request. <a href="{r}about/">Full credentials on the About page.</a></p></div>
 </div>
 
 <h2 style="margin-top:2.5rem">Trusted Across Halton, Peel And Hamilton</h2>
@@ -3588,7 +3823,7 @@ def build_why_choose_ikad():
 <li><strong>Honest pricing</strong> — "competitive pricing and honest", "no surprises"</li>
 <li><strong>Right-sized equipment</strong> — "smaller unit than three other quotes", "house feels more even"</li>
 <li><strong>Professionalism</strong> — "very professional, on time, courteous"</li>
-<li><strong>Owner involvement</strong> — "Mohanad and his team were personable and patient"</li>
+<li><strong>Owner involvement</strong> — "Ahmad and his team were personable and patient"</li>
 </ul>
 <p style="margin-top:1rem"><a href="{r}reviews/">Read all reviews</a> or see our profile on <a href="https://homestars.com/companies/2865489-ikad-mechanical-heating-cooling" rel="noopener" target="_blank">HomeStars</a> directly.</p>
 
@@ -3729,7 +3964,7 @@ def build_sitemap():
         ("residential/",0.9,"monthly",[hero_new]),
         ("commercial/",0.9,"monthly",[f"{BASE}/assets/images/services/commercial-rooftop.jpg"]),
         ("heating-services/",0.9,"monthly",[f"{BASE}/assets/images/services/heating-technician.jpg", f"{BASE}/assets/images/projects/furnace-replacement-oakville.jpg"]),
-        ("air-conditioning-heat-pumps/",0.9,"monthly",[f"{BASE}/assets/images/services/custom-homes-2.webp"]),
+        ("air-conditioning-heat-pumps/",0.9,"monthly",[f"{BASE}/assets/images/services/york-ac-heat-pump.jpg"]),
         ("water-heaters/",0.85,"monthly",[f"{BASE}/assets/images/services/water-heaters.jpg"]),
         ("in-floor-heating/",0.85,"monthly",[f"{BASE}/assets/images/services/air-balancing.jpg"]),
         ("snow-melting-systems/",0.85,"monthly",[f"{BASE}/assets/images/projects/snow-melting-hydronics-install.jpg"]),
