@@ -1140,6 +1140,7 @@ def build_projects():
         ("ac-install-2.jpg","AC condenser placement"),
         ("ac-install-3.jpg","Completed AC installation"),
         ("york-ac-install.jpg","York central AC condenser install in Oakville"),
+        ("heat-pump-install.jpg","Cold-climate heat pump and central AC installed side by side"),
     ]
     cards = "\n".join(
         f'<a href="#" class="gallery-item"><img src="{r}assets/images/projects/{f}" alt="{alt} - IKAD Mechanical" loading="lazy" width="800" height="800"></a>'
