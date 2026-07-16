@@ -3100,6 +3100,168 @@ BLOG_POSTS = [
 <p>Want us to show you the payback on any of these for your specific home? <a href="#hero-quote">Request a free assessment</a> or <a href="tel:+19054916943">call (905) 491-6943</a>.</p>
 """
     },
+    {
+        "slug": "heat-pump-cost-ontario-2026",
+        "cta_heading": "Want the Rebate Math for Your Home?",
+        "cta_copy": "We size it, run the rebate numbers, and give you a fixed price. Free across Halton.",
+        "faq_heading": "Heat Pump Cost Questions",
+        "title": "How Much Does a Heat Pump Cost in Ontario? (2026 Installed Prices)",
+        "meta_title": "Heat Pump Cost Ontario 2026 | Installed Prices + Rebates | IKAD",
+        "description": "What a cold-climate heat pump really costs installed in Ontario in 2026, by type, plus the rebates that cut $7,500 or more, and the payback math for Halton homes.",
+        "date": "2026-07-08",
+        "image": "services/york-ac-heat-pump.jpg",
+        "image_alt": "Cold-climate heat pump outdoor unit installed beside a Halton home by IKAD Mechanical",
+        "excerpt": "A ducted cold-climate heat pump runs about $7,500 to $13,000 installed in Ontario in 2026, before rebates that can knock $7,500 or more off. Here is the real breakdown.",
+        "category": "Cost Guides",
+        "faqs": [
+            ("How much does a heat pump cost installed in Ontario in 2026?",
+             "A ducted cold-climate air-source heat pump is typically $7,500 to $13,000 installed. A single-zone ductless mini-split is $4,500 to $7,500. Rebates through the Home Renovation Savings Program (up to $7,500) plus the interest-free Greener Homes Loan bring the real out-of-pocket cost down significantly."),
+            ("Is a heat pump cheaper to run than a furnace?",
+             "At moderate temperatures a cold-climate heat pump is two to three times more efficient than a gas furnace, so it is cheaper to run for most of the winter. Below about -15 degrees it loses efficiency, which is why most Halton homes run a hybrid: the heat pump handles the bulk of the season and the gas furnace covers the coldest nights."),
+            ("What rebates are available for heat pumps in Ontario in 2026?",
+             "The Home Renovation Savings Program offers up to $7,500 for a qualifying cold-climate air-source heat pump, and it stacks with the up-to-$40,000 interest-free Canada Greener Homes Loan. Registration deadlines apply, we handle the paperwork. See our 2026 rebate guide.")
+        ],
+        "body": """
+<p>A cold-climate heat pump is the biggest HVAC decision most Halton homeowners will make this decade, and the price range is wide enough to be confusing. Here is what a heat pump actually costs installed in Ontario in 2026, what drives the number, and how the rebates change the math.</p>
+
+<h2>2026 Heat Pump Prices in Ontario, by Type</h2>
+<table>
+<thead><tr><th>Heat Pump Type</th><th>Installed Price (2026)</th><th>Best For</th></tr></thead>
+<tbody>
+<tr><td>Single-zone ductless mini-split</td><td>$4,500 &ndash; $7,500</td><td>One room, addition, no-duct home</td></tr>
+<tr><td>Multi-zone ductless (2&ndash;4 heads)</td><td>$9,000 &ndash; $18,000</td><td>Whole heritage home without ductwork</td></tr>
+<tr><td>Ducted cold-climate (works with existing ducts)</td><td>$7,500 &ndash; $13,000</td><td>Standard forced-air Halton home</td></tr>
+<tr><td>Hybrid (heat pump + gas furnace backup)</td><td>$11,500 &ndash; $18,000</td><td>Best of both, coldest-night coverage</td></tr>
+</tbody>
+</table>
+<p>Prices are before rebates. Most Halton installs land in the ducted or hybrid rows.</p>
+
+<h2>What Drives the Price</h2>
+<ul>
+<li><strong>Capacity and cold-climate rating.</strong> A true cold-climate unit (rated to about -25&deg;C) costs more than a standard heat pump but is the only kind that makes sense here. We size it with a Manual J load calculation.</li>
+<li><strong>Ducted vs ductless.</strong> If you already have good ductwork, a ducted heat pump is usually the better value. No ducts (heritage homes, additions) means ductless, which adds indoor heads and line-set runs.</li>
+<li><strong>Electrical.</strong> Heat pumps draw more than an AC. Some older Halton panels need a breaker or a service upgrade, which we flag before quoting.</li>
+<li><strong>Backup heat.</strong> A hybrid keeps your gas furnace as backup; an all-electric setup needs electric-resistance backup, which affects sizing and panel load.</li>
+</ul>
+
+<h2>The Rebates Change Everything</h2>
+<p>This is where heat pumps get interesting in 2026. The <a href="../ontario-heat-pump-rebates-2026/">Home Renovation Savings Program</a> offers up to $7,500 for a qualifying cold-climate air-source heat pump, and it stacks with the interest-free Canada Greener Homes Loan (up to $40,000). On a $12,000 ducted install, the rebate alone can bring your out-of-pocket cost under $5,000, with the balance financed at 0%. We are a participating contractor and file the paperwork for you.</p>
+
+<h2>Running Cost and Payback</h2>
+<p>Because a cold-climate heat pump is two to three times more efficient than a gas furnace at moderate temperatures, most Halton homeowners see meaningful winter savings, plus it replaces your air conditioner, so you are buying heating and cooling in one unit. Paired as a <a href="../heat-pump-vs-furnace-ontario/">hybrid with a gas furnace</a>, you get the efficiency most of the season and gas-furnace muscle on the coldest nights. See our <a href="../lower-heating-bill-ontario/">guide to lowering your heating bill</a> for how it fits with the rest of your system.</p>
+
+<h2>Ducted or Ductless for Your Home?</h2>
+<p>If you have a standard forced-air furnace, a ducted heat pump that shares your existing ducts is usually the cleanest, best-value path. If you have a heritage home with radiators and no ductwork, or you are heating an addition or a stubborn hot room, a <a href="../ductless-mini-split-cost-halton/">ductless mini-split</a> is the answer.</p>
+
+<p>Want the exact number for your home, with the rebate math done? <a href="#hero-quote">Request a free heat pump quote</a> or <a href="tel:+19054916943">call (905) 491-6943</a>.</p>
+"""
+    },
+    {
+        "slug": "furnace-maintenance-tune-up",
+        "cta_heading": "Book Your Fall Furnace Tune-Up",
+        "cta_copy": "Beat the first cold snap. Pre-season tune-ups across Halton, honest and thorough.",
+        "faq_heading": "Furnace Maintenance Questions",
+        "title": "Furnace Maintenance: What a Real Tune-Up Includes (and How Often)",
+        "meta_title": "Furnace Tune-Up Checklist | What It Includes + How Often | IKAD",
+        "description": "What a proper furnace tune-up actually includes, how often to service your furnace in Ontario, DIY vs pro, and why most winter no-heat calls are skipped maintenance.",
+        "date": "2026-07-01",
+        "image": "services/heating-technician.jpg",
+        "image_alt": "IKAD Mechanical technician performing a furnace tune-up in an Oakville basement",
+        "excerpt": "A real furnace tune-up is far more than a filter swap. Here is the full checklist, how often to do it, and what you can safely handle yourself.",
+        "category": "Maintenance",
+        "faqs": [
+            ("How often should I service my furnace?",
+             "Once a year, ideally in early fall before the first cold snap. About 80% of the January no-heat calls we run are on furnaces that have not been tuned in three or more years. Annual service keeps efficiency up, catches small problems cheap, and keeps your manufacturer warranty valid."),
+            ("What is included in a proper furnace tune-up?",
+             "A real tune-up checks and cleans the burners, verifies gas pressure and draft, inspects the heat exchanger for cracks, measures blower amperage and temperature rise, cleans the flame sensor, checks the condensate drain, tests safety switches and carbon monoxide, and swaps the filter. A quick filter change alone is not a tune-up."),
+            ("Can I maintain my furnace myself?",
+             "You can and should change the filter and keep the area around the furnace clear. Anything involving the burners, gas valve, or heat exchanger should be done by a TSSA-certified gas fitter, both for safety and to keep your warranty intact.")
+        ],
+        "body": """
+<p>Furnace maintenance is the cheapest insurance in your home. A proper annual tune-up costs a fraction of an emergency no-heat call, keeps your gas bill down, and is often required to keep the manufacturer warranty valid. The problem is that "tune-up" means very different things to different companies. Here is what a real one includes, and how often you actually need it.</p>
+
+<h2>How Often Should You Service a Furnace?</h2>
+<p>Once a year, ideally in early fall before the heating season starts. We are blunt about why: roughly 80% of the January no-heat calls we run across Halton are on systems that had not been serviced in three or more years. Small, cheap problems, a dirty flame sensor, a marginal igniter, a partially blocked drain, quietly become a 2 a.m. failure in a cold snap. Annual service catches them while they are cheap.</p>
+
+<h2>What a Real Tune-Up Includes</h2>
+<p>When we tune a furnace, this is the checklist. If a quote does not cover most of it, it is a filter change with a fancy name.</p>
+<ul>
+<li><strong>Burners:</strong> inspect and clean; check flame quality (should be steady and blue, not yellow or flickering).</li>
+<li><strong>Gas pressure:</strong> measure and adjust manifold pressure to spec.</li>
+<li><strong>Heat exchanger:</strong> inspect for cracks, the number-one safety item, since a cracked exchanger can leak carbon monoxide.</li>
+<li><strong>Draft and venting:</strong> confirm proper draft and clear intake/exhaust.</li>
+<li><strong>Blower:</strong> measure motor amperage and check the wheel; verify temperature rise is within the nameplate range.</li>
+<li><strong>Flame sensor and igniter:</strong> clean the flame sensor (a common no-start cause) and check the igniter.</li>
+<li><strong>Condensate drain:</strong> clear the drain and trap on high-efficiency units.</li>
+<li><strong>Safety switches:</strong> test the high-limit, pressure and rollout switches.</li>
+<li><strong>Carbon monoxide:</strong> test for CO in the supply air and around the unit.</li>
+<li><strong>Filter:</strong> replace or clean, and check static pressure if airflow seems off.</li>
+</ul>
+
+<h2>What You Can Do Yourself</h2>
+<p>Between professional tune-ups, you can handle the easy wins: change a 1-inch filter every one to three months (media filters every 6 to 12), keep the area around the furnace clear, and in winter make sure the outdoor intake and exhaust pipes are not blocked by snow or ice. Everything past the filter, opening the burner compartment, touching the gas valve, or disturbing the heat exchanger, should be left to a TSSA-certified gas fitter. See our <a href="../furnace-wont-turn-on/">furnace no-start checklist</a> if yours quits between visits.</p>
+
+<h2>When Maintenance Is Not Enough</h2>
+<p>If your furnace is 18-plus years old and you are paying for repairs every winter, the math has tipped. A modern 96%-plus furnace (we install York, Luxaire and Coleman) burns far less gas, and there are real rebates on replacement. See our <a href="../furnace-cost-oakville-2026/">2026 furnace cost guide</a> to compare.</p>
+
+<p>Ready to book a fall tune-up before the rush? <a href="#hero-quote">Request a visit</a> or <a href="tel:+19054916943">call (905) 491-6943</a>. We do not upsell, if your furnace is healthy, we will tell you.</p>
+"""
+    },
+    {
+        "slug": "ductless-mini-split-cost-halton",
+        "cta_heading": "Thinking About a Ductless System?",
+        "cta_copy": "We design single- and multi-zone ductless for Halton homes. Free on-site assessment.",
+        "faq_heading": "Ductless Mini-Split Questions",
+        "title": "Ductless Mini-Split Cost & Buyer's Guide for Halton Homes (2026)",
+        "meta_title": "Ductless Mini-Split Cost Oakville 2026 | Buyer's Guide | IKAD",
+        "description": "Ductless mini-split cost in Halton in 2026, single vs multi-zone, cold-climate performance, where they make sense (additions, no-duct homes, hot rooms) and rebates.",
+        "date": "2026-06-24",
+        "image": "projects/heat-pump-install.jpg",
+        "image_alt": "Fujitsu Airstage ductless mini-split heat pump installed by IKAD Mechanical in Halton",
+        "excerpt": "A single-zone ductless mini-split runs about $4,500 to $7,500 installed in Halton. Here is when ductless is the right call, and when it is not.",
+        "category": "Buying Guides",
+        "faqs": [
+            ("How much does a ductless mini-split cost in Halton?",
+             "A single-zone system (one outdoor unit, one indoor head) is typically $4,500 to $7,500 installed. Multi-zone systems with two to four heads run $9,000 to $18,000 depending on capacity and how far the line sets have to travel. Cold-climate models cost more but are the only ones worth installing here."),
+            ("Do ductless mini-splits work in cold Ontario winters?",
+             "Cold-climate models (Fujitsu Airstage, Mitsubishi Hyper-Heat) work efficiently down to about -25 degrees, which covers the great majority of Halton winter hours. They both heat and cool, so one system covers all year. On the very coldest nights a backup heat source helps."),
+            ("Where does a ductless system make the most sense?",
+             "Homes without ductwork (heritage Old Oakville and downtown Hamilton), additions and above-garage rooms, and single stubborn hot-or-cold rooms a central system cannot balance. If you already have good ducts, a ducted heat pump is usually the better value.")
+        ],
+        "body": """
+<p>Ductless mini-splits have gone from niche to mainstream in Halton, and for good reason: they heat and cool, they are efficient, and they solve problems central systems cannot. But they are not the right answer for every home. Here is what they cost in 2026, and when ductless actually makes sense.</p>
+
+<h2>What a Ductless Mini-Split Is</h2>
+<p>A ductless (or mini-split) system is a heat pump with an outdoor unit connected by a small line set to one or more wall- or ceiling-mounted indoor heads, no ductwork required. Each head is its own zone with its own temperature. Because it is a heat pump, it both heats and cools, replacing a window AC and a space heater in one quiet, efficient unit.</p>
+
+<h2>2026 Ductless Cost in Halton</h2>
+<table>
+<thead><tr><th>System</th><th>Installed Price (2026)</th><th>Typical Use</th></tr></thead>
+<tbody>
+<tr><td>Single-zone (1 head)</td><td>$4,500 &ndash; $7,500</td><td>One room, addition, garage, hot room</td></tr>
+<tr><td>Two-zone</td><td>$8,000 &ndash; $12,000</td><td>Upstairs bedrooms, or main floor + basement</td></tr>
+<tr><td>Three to four-zone</td><td>$12,000 &ndash; $18,000</td><td>Whole heritage home without ducts</td></tr>
+</tbody>
+</table>
+<p>Cold-climate units qualify for the same <a href="../ontario-heat-pump-rebates-2026/">heat pump rebates</a> as ducted systems, which can take a large bite out of these numbers.</p>
+
+<h2>Where Ductless Wins</h2>
+<ul>
+<li><strong>No ductwork:</strong> heritage homes in Old Oakville, downtown Burlington and Hamilton with radiators and no ducts. Ductless avoids tearing into plaster walls.</li>
+<li><strong>Additions and bonus rooms:</strong> above-garage rooms, sunrooms and additions that the main system never reached.</li>
+<li><strong>One stubborn room:</strong> a bedroom that is always too hot or too cold. Sometimes the fix is <a href="../upstairs-too-hot-too-cold/">air balancing</a>, but when it is not, a single head solves it.</li>
+<li><strong>Efficiency upgrade:</strong> as a cold-climate heat pump, it cuts heating cost and replaces window units.</li>
+</ul>
+
+<h2>When Ductless Is Not the Answer</h2>
+<p>If your home already has good ductwork, a <a href="../heat-pump-cost-ontario-2026/">ducted cold-climate heat pump</a> usually delivers better value and a cleaner look than multiple wall heads. And a single mini-split will not heat a whole house evenly, multi-zone or a ducted system is the right call for whole-home comfort.</p>
+
+<h2>Cold-Climate Performance</h2>
+<p>The only mini-splits worth installing in Ontario are true cold-climate models. We install Fujitsu Airstage and Mitsubishi Hyper-Heat units that hold efficient output down to about -25 degrees. Sizing still matters, an oversized head short-cycles and an undersized one struggles, so we run the numbers before quoting.</p>
+
+<p>Not sure whether ductless or ducted is right for your home? <a href="#hero-quote">Request a free assessment</a> or <a href="tel:+19054916943">call (905) 491-6943</a>, we will tell you straight.</p>
+"""
+    },
 ]
 
 def build_blog_post(post):
