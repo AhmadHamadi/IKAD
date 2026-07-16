@@ -155,7 +155,7 @@ def footer(r):
 
 <div style="border-top:1px solid rgba(255,255,255,.1);margin-top:2.25rem;padding-top:1.5rem;font-size:.82rem;color:#94a3b8;line-height:1.7">
 <p style="margin:0 0 .5rem"><strong style="color:#cbd5e1">Popular searches:</strong> HVAC contractor near me, HVAC near me Oakville, trusted HVAC contractor Halton, best HVAC company Oakville, top-rated HVAC Burlington, licensed HVAC contractor near me, family-owned HVAC Oakville, local HVAC contractor Burlington, emergency furnace repair near me, 24 hour HVAC Oakville, same-day AC repair Halton, furnace installation Oakville, AC repair Burlington, heat pump rebate Ontario 2026, tankless water heater Halton, ductless mini-split Mississauga, commercial HVAC contractor Hamilton, custom home HVAC Milton, snow melting driveway Oakville, furnace tune-up Burlington, boiler installation Oakville, TSSA certified gas fitter Halton, ECRA licensed HVAC, HRAI member HVAC Oakville, no-heat repair near me, heat pump installer near me, indoor air quality Halton</p>
-<p style="margin:0"><strong style="color:#cbd5e1">Brands installed:</strong> Rheem, Lennox, Carrier, Daikin, Mitsubishi Hyper-Heat, Goodman, Bryant, York, Trane, Continental, Heil, Navien, Rinnai, Bradford White, John Wood, A.O. Smith, Viessmann, NTI, Lochinvar, Uponor, Watts, Ecobee, Lifebreath, Captive-Aire, Reznor, Greenheck</p>
+<p style="margin:0"><strong style="color:#cbd5e1">Brands installed:</strong> York, Luxaire, Coleman, Daikin, Mitsubishi Hyper-Heat, Fujitsu, Navien, Rinnai, Bradford White, John Wood, A.O. Smith, Viessmann, NTI, Lochinvar, Uponor, Watts, Ecobee, Lifebreath, Captive-Aire, Reznor, Greenheck</p>
 </div>
 
 <div class="legal" style="margin-top:1.5rem"><span>© <span id="yr">2026</span> IKAD Mechanical Inc. All rights reserved. HVAC contractor in Oakville, Ontario serving Halton Region, Peel and Hamilton since 2010.</span><span><a href="{r}privacy-policy/">Privacy</a> · <a href="{r}terms-of-service/">Terms</a> · <a href="{r}sitemap.xml">Sitemap</a> · <a href="{r}robots.txt">Robots</a></span></div>
@@ -1212,7 +1212,7 @@ def build_about():
 <ul>
 <li>Licensed gas fitters (G1/G2) &amp; HVAC technicians (313A/313D)</li>
 <li>TSSA contractor, ECRA/ESA licensed, HRAI member in good standing</li>
-<li>Manufacturer-certified for Rheem, Lennox, Carrier, Daikin, Mitsubishi, Navien &amp; Rinnai</li>
+<li>Manufacturer-certified for York, Luxaire, Coleman, Daikin, Mitsubishi, Navien &amp; Rinnai</li>
 <li>$5M liability insurance &amp; WSIB coverage on every job site</li>
 <li>15+ years serving Halton &amp; the GTA, over 1,200 homes and businesses</li>
 </ul>
@@ -1266,7 +1266,7 @@ def build_about():
 <li><strong>HRAI member in good standing</strong> (Heating, Refrigeration and Air Conditioning Institute of Canada)</li>
 <li><strong>313A and 313D refrigeration technician certificates</strong> on staff for AC and heat pump work</li>
 <li><strong>$5,000,000 commercial general liability insurance</strong>, plus WSIB coverage on every crew member, every job</li>
-<li><strong>Manufacturer-certified installer</strong> for Rheem, Lennox, Carrier, Daikin, Mitsubishi, Goodman, Navien, Rinnai, Viessmann and NTI</li>
+<li><strong>Manufacturer-certified installer</strong> for York, Luxaire, Coleman, Daikin, Mitsubishi, Navien, Rinnai, Viessmann and NTI</li>
 </ul>
 <p>We provide certificates of insurance, license numbers and TSSA contractor IDs to property managers, builders and corporate clients on request. Just ask when you're getting the quote.</p>
 
@@ -2354,7 +2354,7 @@ BLOG_POSTS = [
 <li><strong>Home Renovation Savings Program (replaced Enbridge HER+ in Jan 2025):</strong> Up to $250 for a 96%+ AFUE furnace when bundled with a heat pump install. No energy audit required, direct deposit, registration deadline May 31, 2026. <a href="../ontario-heat-pump-rebates-2026/">Full HRS guide here.</a></li>
 <li><strong>Canada Greener Homes Loan:</strong> Interest-free up to $40,000 if the furnace is part of a broader retrofit (heat pump, insulation, etc.). The <em>Grant</em> closed in 2024, the Loan is what's still active.</li>
 <li><strong>Save On Energy:</strong> Periodic provincial promos on smart thermostats ($75–$100).</li>
-<li><strong>Manufacturer rebates:</strong> Lennox, Carrier, Rheem and Daikin run seasonal $200–$800 rebates on specific high-tier models. We pass these through to your quote.</li>
+<li><strong>Manufacturer rebates:</strong> York, Luxaire and Coleman run seasonal $200–$800 rebates on specific high-tier models. We pass these through to your quote.</li>
 </ul>
 
 <h2>Manual J: The Reason Right-Sized Furnaces Last Longer</h2>
@@ -2617,7 +2617,7 @@ BLOG_POSTS = [
 <aside class="answer-box" role="complementary"><span class="answer-box__label">Quick Answer</span><h2>2026 Ontario HVAC Rebates At A Glance</h2><p>Halton homeowners doing a heat pump or furnace upgrade in 2026 can typically stack these programs:</p><ul>
 <li><strong>Home Renovation Savings Program:</strong> up to $7,500 for an air-source heat pump, $12,000 for ground-source, $1,000 for a heat pump water heater (May 31, 2026 deadline)</li>
 <li><strong>Canada Greener Homes Loan:</strong> interest-free loan up to $40,000, 10-year repayment</li>
-<li><strong>Manufacturer rebates:</strong> Lennox / Carrier / Daikin promos, $200–$800 on specific models</li>
+<li><strong>Manufacturer rebates:</strong> York / Daikin / Mitsubishi promos, $200–$800 on specific models</li>
 <li><strong>Save on Energy thermostat rebates:</strong> $75–$100 on a smart thermostat</li>
 </ul></aside>
 
@@ -3106,7 +3106,7 @@ BLOG_POSTS = [
         "cta_copy": "We size it, run the rebate numbers, and give you a fixed price. Free across Halton.",
         "faq_heading": "Heat Pump Cost Questions",
         "title": "How Much Does a Heat Pump Cost in Ontario? (2026 Installed Prices)",
-        "meta_title": "Heat Pump Cost Ontario 2026 | Installed Prices + Rebates | IKAD",
+        "meta_title": "Heat Pump Cost Ontario 2026 | Installed Prices by Type | IKAD",
         "description": "What a cold-climate heat pump really costs installed in Ontario in 2026, by type, plus the rebates that cut $7,500 or more, and the payback math for Halton homes.",
         "date": "2026-07-08",
         "image": "services/york-ac-heat-pump.jpg",

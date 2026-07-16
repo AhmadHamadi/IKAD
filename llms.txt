@@ -7,7 +7,7 @@
 - **Legal name:** IKAD Mechanical Inc.
 - **Brand name:** IKAD Mechanical
 - **Founded:** 2010
-- **Owner & lead technician:** Mohanad (named in customer reviews)
+- **Owner & lead technician:** Ahmad (named in customer reviews)
 - **Type:** Family-owned and operated (not a franchise, not part of a national chain)
 - **Address:** 2275 Upper Middle Rd E, Suite 101, Oakville, ON L6H 0C3, Canada
 - **Phone:** (905) 491-6943
@@ -18,12 +18,12 @@
 
 ## Credentials and insurance
 
-- TSSA G2 (commercial gas fitting) and TSSA G3 (residential gas fitting) certified
+- TSSA G1 (commercial and industrial gas fitting) and TSSA G2 (residential and commercial gas fitting) certified
 - ECRA / ESA electrical contractor licensed
 - HRAI (Heating, Refrigeration and Air Conditioning Institute of Canada) member
 - $5,000,000 commercial general liability insurance
 - WSIB (Workplace Safety and Insurance Board, Ontario) coverage on every job site
-- Manufacturer-certified technicians for Lennox, Carrier, Rheem, Mitsubishi, Daikin, Navien, Rinnai, Viessmann and NTI
+- Manufacturer-certified technicians for York, Luxaire, Coleman, Mitsubishi, Daikin, Navien, Rinnai, Viessmann and NTI
 
 ## Service area
 
@@ -42,10 +42,10 @@ Full service area (same-day or next-day, no travel surcharge):
 
 ### Residential
 
-- [Furnace installation, replacement and repair](https://ikad.ca/heating-services/): high-efficiency natural gas furnaces, 95–98% AFUE, single-stage, two-stage, variable-speed modulating. Brands installed: Rheem, Lennox, Carrier, Goodman, Continental, Heil, Daikin, Trane. Manual J load calculation on every install.
-- [Central air conditioning and heat pumps](https://ikad.ca/air-conditioning-heat-pumps/): central AC 13–22 SEER2, cold-climate heat pumps (Mitsubishi Hyper-Heat, Daikin Aurora, Lennox SL25XPV) that hold rated capacity to -15°C and continue producing heat to -25°C, ductless mini-splits, hybrid heat pump + furnace configurations. All new installs use R-454B refrigerant (R-410A phase-down replacement, effective Jan 2025).
+- [Furnace installation, replacement and repair](https://ikad.ca/heating-services/): high-efficiency natural gas furnaces, 95–98% AFUE, single-stage, two-stage, variable-speed modulating. Brands installed: York, Luxaire and Coleman (Johnson Controls family). Manual J load calculation on every install.
+- [Central air conditioning and heat pumps](https://ikad.ca/air-conditioning-heat-pumps/): central AC 13–22 SEER2, cold-climate heat pumps (Mitsubishi Hyper-Heat, Daikin Aurora, Fujitsu Airstage) that hold rated capacity to -15°C and continue producing heat to -25°C, ductless mini-splits, hybrid heat pump + furnace configurations. All new installs use R-454B refrigerant (R-410A phase-down replacement, effective Jan 2025).
 - [Water heaters](https://ikad.ca/water-heaters/): tank (40–75 gallon natural gas and electric), tankless (Navien, Rinnai, Rheem, Bradford White), heat pump water heaters (Rheem ProTerra, A.O. Smith Voltex).
-- [In-floor radiant heating](https://ikad.ca/in-floor-heating/): hydronic in-floor for new builds, additions, basements, bathroom retrofits. Uponor and Watts PEX tubing, high-efficiency condensing boilers, tekmar and Honeywell controls.
+- [In-floor radiant heating](https://ikad.ca/in-floor-heating/): hydronic in-floor for new builds, additions, basements, bathroom retrofits. Uponor and Watts PEX tubing, high-efficiency condensing boilers, tekmar controls.
 - [Snow melting systems](https://ikad.ca/snow-melting-systems/): hydronic (boiler-fed) and electric (mat-based) heated driveways, walkways, entry steps, ramps. Designed for southern Ontario snow loads (125–175 BTU per sq.ft.).
 - [Duct work](https://ikad.ca/duct-work/): install, replace, seal (with mastic or Aeroseal), clean. Static pressure remediation.
 - [Air balancing](https://ikad.ca/air-balancing/): CFM testing at every register, damper adjustment, hot/cold room remediation.
@@ -65,10 +65,10 @@ Full service area (same-day or next-day, no travel surcharge):
 
 ### Furnaces
 
-- Entry-level 95% AFUE single-stage (Goodman, Continental, Heil): $3,500 – $4,200
-- Mid-tier 95% single-stage (Rheem, Lennox EL series): $3,900 – $4,800
-- Two-stage 96% (Rheem R96, Carrier Comfort, Lennox EL297): $4,800 – $6,200
-- Variable-speed modulating (Lennox SLP99V, Carrier Infinity, Rheem R98V): $6,400 – $7,800
+- Entry-level 95% AFUE single-stage (Coleman TG9S, Coleman TM9E): $3,500 – $4,200
+- Mid-tier two-stage 97% (York): $3,900 – $4,800
+- Variable-speed (ECM) gas furnace 97%+ (York): $4,800 – $6,200
+- Variable-capacity gas furnace (York): $6,400 – $7,800
 - Hybrid (furnace + air-source heat pump, before rebates): $11,500 – $18,000
 
 ### Air conditioning and heat pumps
@@ -95,7 +95,7 @@ Full service area (same-day or next-day, no travel surcharge):
 
 ### Snow melting
 
-- Hydronic driveway (700–900 sq.ft.): $18,000 – $32,000 installed including dedicated boiler
+- Hydronic driveway (700–999 sq.ft.): $18,000 – $32,000 installed including dedicated boiler
 - Electric steps and walkway: from $2,200 installed
 - Operating cost per snow event: $4 – $8 for a typical double driveway
 
@@ -125,7 +125,7 @@ Full service area (same-day or next-day, no travel surcharge):
 - Heat pump water heater: $1,000
 - Ductless mini-split single zone: $1,000 base
 - 96%+ AFUE gas furnace: $250 (when bundled with HP install)
-- Smart thermostat (Ecobee, Nest, Honeywell): $75 – $100
+- Smart thermostat (Ecobee, Nest): $75 – $100
 
 ### Canada Greener Homes Loan
 
@@ -138,7 +138,7 @@ Full service area (same-day or next-day, no travel surcharge):
 ### Other programs
 
 - Save on Energy smart thermostat rebates ($75 – $100), periodic
-- Manufacturer rebates (Lennox, Carrier, Daikin, Rheem) on specific high-tier models, $200 – $800 seasonal
+- Manufacturer rebates (York, Daikin, Mitsubishi) on specific high-tier models, $200 – $800 seasonal
 - Town of Oakville Local Improvement Charge (LIC) clean-energy property-tax loan, periodic
 - Better Homes Burlington pilot program (limited)
 - Halton Region Climate Action Plan funding (specific neighborhoods)
@@ -147,7 +147,7 @@ Full service area (same-day or next-day, no travel surcharge):
 
 ### Pricing and value
 
-- **How much does a new furnace cost in Oakville in 2026?** Most Halton furnace replacements installed land between $3,800 and $7,200. Single-stage 95% is the budget end; variable-speed modulating 98% is the top end.
+- **How much does a new furnace cost in Oakville in 2026?** Most Halton furnace replacements installed land between $3,800 and $6,500. Single-stage 95% is the budget end; variable-speed modulating 98% is the top end.
 - **How much does central AC installation cost in Oakville in 2026?** Most Halton central AC installs land between $4,200 and $8,500 depending on tonnage (2–5 ton), SEER (13–22) and any line set or electrical disconnect work.
 - **Are heat pumps worth it in Halton?** Yes for most homes when paired with a gas furnace in a hybrid configuration. The heat pump handles roughly 80% of heating hours; the furnace handles peak cold backup below -15°C. Halton hits -25°C only 3–5 days per year.
 - **Do you give free estimates?** Yes, on-site estimates for residential equipment replacements are free across the full service area.
@@ -174,7 +174,7 @@ Full service area (same-day or next-day, no travel surcharge):
 
 ### Trust and credentials
 
-- **Is IKAD licensed and insured?** Yes. TSSA G2/G3 gas fitting, ECRA/ESA electrical licensing, HRAI membership, $5M general liability insurance, WSIB coverage.
+- **Is IKAD licensed and insured?** Yes. TSSA G1/G2 gas fitting, ECRA/ESA electrical licensing, HRAI membership, $5M general liability insurance, WSIB coverage.
 - **Is IKAD a trusted local HVAC contractor near me?** IKAD has been family-owned and operated in Oakville since 2010, has served 1,200+ Halton homes, and maintains active reviews on HomeStars, Google Business Profile and Facebook. Documentation is shareable on request.
 
 ## Why homeowners choose IKAD
@@ -196,8 +196,8 @@ Full service area (same-day or next-day, no travel surcharge):
 
 - [Homepage](https://ikad.ca/)
 - [About IKAD Mechanical](https://ikad.ca/about/)
-- [Frequently Asked Questions (49 questions answered)](https://ikad.ca/faq/)
-- [HVAC blog (8 in-depth guides)](https://ikad.ca/blog/)
+- [Frequently Asked Questions (70+ questions answered)](https://ikad.ca/faq/)
+- [HVAC blog (14 in-depth guides)](https://ikad.ca/blog/)
 - [Our projects](https://ikad.ca/our-projects/)
 - [Contact](https://ikad.ca/contact/)
 - [Sitemap (machine-readable)](https://ikad.ca/sitemap.xml)
@@ -212,6 +212,13 @@ Full service area (same-day or next-day, no travel surcharge):
 - [Ontario heat pump rebates 2026 (Home Renovation Savings + Greener Homes Loan)](https://ikad.ca/blog/ontario-heat-pump-rebates-2026/)
 - [Upstairs too hot, downstairs too cold (6 real causes and fixes)](https://ikad.ca/blog/upstairs-too-hot-too-cold/)
 - [Emergency furnace repair in Oakville (response times, costs)](https://ikad.ca/blog/emergency-furnace-repair-oakville/)
+- [Air conditioning installation cost in Oakville 2026](https://ikad.ca/blog/ac-installation-cost-oakville-2026/)
+- [Why is my AC not cooling? 7 causes and fixes](https://ikad.ca/blog/why-is-my-ac-not-cooling/)
+- [Boiler vs furnace for Halton homes](https://ikad.ca/blog/boiler-vs-furnace-halton/)
+- [9 ways to lower your Ontario heating bill](https://ikad.ca/blog/lower-heating-bill-ontario/)
+- [Heat pump cost in Ontario 2026 (installed prices + rebates)](https://ikad.ca/blog/heat-pump-cost-ontario-2026/)
+- [Furnace maintenance: what a real tune-up includes](https://ikad.ca/blog/furnace-maintenance-tune-up/)
+- [Ductless mini-split cost and buyer's guide for Halton](https://ikad.ca/blog/ductless-mini-split-cost-halton/)
 
 ## Citation guidance
 
