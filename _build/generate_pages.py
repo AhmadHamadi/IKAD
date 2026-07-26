@@ -244,7 +244,7 @@ def hero_quote(r, bg, eyebrow, h1, lead, badges=None, service_default=""):
 <form class="hero-quote" id="hero-quote" data-form="quote" action="/api/quote" method="post" novalidate>
 <h2>Get Your Free Quote</h2>
 <p class="hero-quote__sub">Same-day response during business hours. No pressure.</p>
-<div class="form__honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form__honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label><label>Company URL<input type="text" name="url" tabindex="-1" autocomplete="off"></label><label>Confirm email<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
 <div class="form__row">
 <div class="form__group"><label class="sr-only" for="hq-name">Name</label><input id="hq-name" name="name" type="text" placeholder="Your name *" required autocomplete="name"></div>
 <div class="form__group"><label class="sr-only" for="hq-phone">Phone</label><input id="hq-phone" name="phone" type="tel" placeholder="Phone *" required autocomplete="tel"></div>
@@ -1387,7 +1387,7 @@ def build_contact():
 <form class="form" data-form="quote" action="/api/quote" method="post" novalidate>
 <h2 style="margin-top:0">Request A Free Quote</h2>
 <p>Fill in a few details. We'll respond within one business day with next steps and pricing.</p>
-<div class="form__honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form__honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label><label>Company URL<input type="text" name="url" tabindex="-1" autocomplete="off"></label><label>Confirm email<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
 <div class="form__row">
 <div class="form__group"><label for="name">Your Name *</label><input id="name" name="name" type="text" required autocomplete="name"></div>
 <div class="form__group"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>

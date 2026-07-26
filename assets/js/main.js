@@ -127,6 +127,13 @@
 
   /* ----- Quote form submission via SMTP (/api/quote) ----- */
   document.querySelectorAll('form[data-form="quote"]').forEach(function (form) {
+    // Anti-spam telemetry: bots post instantly and never touch a field.
+    var loadedAt = Date.now();
+    var interacted = 0;
+    ['focusin', 'input', 'change', 'pointerdown', 'keydown'].forEach(function (evt) {
+      form.addEventListener(evt, function () { interacted = 1; }, { once: true, passive: true });
+    });
+
     var status = form.querySelector('.form__status');
     if (!status) {
       status = document.createElement('p');
@@ -145,6 +152,8 @@
       var payload = {};
       data.forEach(function (v, k) { payload[k] = v; });
       payload.source_page = window.location.pathname + window.location.search;
+      payload.form_elapsed_ms = Date.now() - loadedAt;
+      payload.form_interacted = interacted;
 
       if (submitBtn) {
         submitBtn.disabled = true;
