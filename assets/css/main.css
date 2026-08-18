@@ -117,6 +117,10 @@ p { margin: 0 0 1em; }
   align-items: center;
   gap: .5rem;
   padding: .9rem 1.6rem;
+  /* <button> does not inherit the page font by default, so without this a
+     .btn on a <button> renders shorter and in a different face than the same
+     .btn on an <a> sitting next to it. */
+  font-family: inherit;
   font-weight: 700;
   font-size: .95rem;
   line-height: 1;
@@ -139,7 +143,7 @@ p { margin: 0 0 1em; }
 .btn--ghost:hover { color: #e30613; }
 .btn--large { padding: 1.1rem 2rem; font-size: 1rem; }
 
-.btn-row { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: .75rem; }
 
 /* Header & Nav
    ========================================================================== */
@@ -632,7 +636,7 @@ body.nav-open { overflow: hidden; }
   font-weight: 800;
   margin-bottom: .75rem;
 }
-.process__step h4 { color: #fff; margin: 0 0 .35rem; }
+.process__step h3, .process__step h4 { color: #fff; font-size: 1.1rem; margin: 0 0 .35rem; }
 .process__step p { color: #cbd5e1; margin: 0; font-size: .92rem; }
 
 /* Project gallery
@@ -985,7 +989,7 @@ table.cost-table, .svc-detail__main table {
   padding: 3.5rem 0 1.25rem;
   font-size: .92rem;
 }
-.site-footer h4 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1rem; }
+.site-footer h2, .site-footer h4 { color: #fff; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1rem; }
 .site-footer a { color: #cbd5e1; }
 .site-footer a:hover { color: #fff; text-decoration: none; }
 .footer-grid {

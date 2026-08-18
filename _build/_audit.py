@@ -13,6 +13,15 @@ for root,_,files in os.walk('.'):
             pages.append(os.path.join(root,f).replace(os.sep,'/').lstrip('./'))
 pages.sort()
 
+# Which pages are actually noindex, read from the robots meta rather than
+# guessed from the filename. Paid-traffic landing pages are noindex by design
+# and must not be graded on canonical / sitemap / breadcrumb / LCP-preload.
+def _robots(p):
+    m = re.search(r'<meta name="robots" content="([^"]*)"', open(p,'r',encoding='utf-8').read())
+    return m.group(1) if m else ''
+
+NOINDEX = {p for p in pages if 'noindex' in _robots(p)}
+
 results = {}
 fail_examples = {}
 
@@ -24,7 +33,7 @@ t1 = sum(1 for p in pages if open(p,'r',encoding='utf-8').read().startswith(('<!
 results['Valid HTML doctype + closing tag'] = (t1, len(pages))
 
 # T2: every indexable page has JSON-LD (404 + thank-you are noindex, no schema needed)
-indexable = [p for p in pages if 'thank-you' not in p and '404' not in p]
+indexable = [p for p in pages if p not in NOINDEX]
 t2 = sum(1 for p in indexable if 'application/ld+json' in open(p,'r',encoding='utf-8').read())
 results['Has JSON-LD schema (indexable pages)'] = (t2, len(indexable))
 
@@ -49,7 +58,7 @@ results['Unique titles'] = (len(titles) - dup_titles, len(titles))
 # T5: canonical matches own URL
 t5p = 0; t5t = 0
 for p in pages:
-    if 'thank-you' in p or '404' in p: continue
+    if p in NOINDEX: continue
     t5t += 1
     c = open(p,'r',encoding='utf-8').read()
     m = re.search(r'<link rel="canonical" href="([^"]+)"', c)
@@ -72,7 +81,7 @@ sm = open('sitemap.xml').read()
 sm_urls = set(re.findall(r'<loc>https://ikad\.ca/([^<]*)</loc>', sm))
 indexable_urls = set()
 for p in pages:
-    if 'thank-you' in p or '404' in p: continue
+    if p in NOINDEX: continue
     u = p.replace('index.html','').rstrip('/')
     indexable_urls.add('' if u == '' else u + '/')
 t7 = sum(1 for u in indexable_urls if u in sm_urls)
@@ -118,7 +127,7 @@ results['FAQPage valid (>=2 Qs, no HTML)'] = (t12p, t12t)
 # T13: non-home has breadcrumb
 t13p = 0; t13t = 0
 for p in pages:
-    if p == 'index.html' or 'thank-you' in p or '404' in p: continue
+    if p == 'index.html' or p in NOINDEX: continue
     t13t += 1
     if 'BreadcrumbList' in open(p,'r',encoding='utf-8').read(): t13p += 1
 results['Non-home pages have breadcrumb'] = (t13p, t13t)
@@ -126,7 +135,7 @@ results['Non-home pages have breadcrumb'] = (t13p, t13t)
 # T14: images alt + dims (excluding noindex pages)
 t14p = 0; t14t = 0
 for p in pages:
-    if 'thank-you' in p or '404' in p: continue  # noindex pages excluded
+    if p in NOINDEX: continue  # noindex pages excluded
     c = open(p,'r',encoding='utf-8').read()
     for img in re.findall(r'<img[^>]+>', c):
         if 'class="icon"' in img or 'ikad-logo' in img: continue
@@ -172,9 +181,12 @@ results['Internal links resolve'] = (total_links - broken, total_links)
 # T17: hero image preload on indexable pages
 t17p = 0; t17t = 0
 for p in pages:
-    if 'thank-you' in p or '404' in p or 'privacy' in p or 'terms' in p: continue
-    t17t += 1
+    if p in NOINDEX or 'privacy' in p or 'terms' in p: continue
     c = open(p,'r',encoding='utf-8').read()
+    # Only pages whose LCP is actually an image can preload one. Text-hero
+    # pages (e.g. the estimator) have nothing to preload and aren't graded.
+    if 'class="hero__bg"' not in c: continue
+    t17t += 1
     if 'rel="preload"' in c and 'as="image"' in c: t17p += 1
 results['Hero preload (LCP signal)'] = (t17p, t17t)
 

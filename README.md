@@ -20,6 +20,11 @@ IKAD/
 ├── our-projects/
 ├── about/
 ├── contact/
+├── estimate/                   → /estimate/  (Instant HVAC Estimator, indexed)
+│   ├── ac-replacement/         → ad landing page, noindex
+│   ├── repair-or-replace/      → ad landing page, noindex
+│   ├── financing/              → ad landing page, noindex
+│   └── free-duct-cleaning/     → ad landing page, noindex
 ├── service-areas/              → /service-areas/
 │   ├── oakville/
 │   ├── burlington/
@@ -108,6 +113,53 @@ Configure it with the environment variables listed in `.env.example` — locally
 
 If the fetch fails outright, `assets/js/main.js` falls back to a `mailto:` link so a
 lead is never lost.
+
+## Instant HVAC Estimator (`/estimate/`)
+
+A guided estimator that qualifies the homeowner, gates the result behind contact
+capture, then shows Good / Better / Best packages with installed pricing, monthly
+payments, estimated rebates and an appointment request.
+
+| File | Role |
+| --- | --- |
+| `assets/js/estimator.js` | Question flow, pricing engine, equipment catalogue, results UI |
+| `assets/css/estimator.css` | Estimator-only styles (depends on `main.css` for tokens) |
+| `api/estimate.js` | Serverless endpoint: spam scoring, lead scoring, both emails |
+| `_build/generate_pages.py` → `ESTIMATOR_CAMPAIGNS` | One entry per landing page |
+
+**Pricing.** Base ranges live in `CATALOG` in `assets/js/estimator.js`, quoted at the
+2,000–2,500 sq. ft. baseline and scaled by a per-size `factor`. They deliberately match
+the published cost guides in `/blog/` — **change both together or the site contradicts
+itself.** Rebates follow Ontario's 2026 Home Renovation Savings rates
+(~$1,250/ton for a full heat pump capped at $7,500, ~$500/ton hybrid, ~$100 thermostat).
+Financing is illustrated at `FINANCE` (9.99% / 120 months) and always labelled OAC.
+
+**Campaigns.** Add an object to `ESTIMATOR_CAMPAIGNS` and re-run the generator. `preset`
+answers are applied *and their steps skipped*, so an "AC replacement" ad never re-asks
+what the ad already said; a "not what you need?" control on step 1 lets a mis-clicked
+visitor start over. Campaign pages are `noindex` so they never compete with `/estimate/`
+in search. Point ads at e.g.
+`/estimate/ac-replacement/?utm_source=meta&utm_campaign=ac-over-12`.
+
+**Lead delivery.** The endpoint fires once per homeowner action, all sharing one
+`lead_id`:
+
+| stage | fires when | sends |
+| --- | --- | --- |
+| `estimate` | contact captured, result revealed | lead email **+** a copy to the homeowner |
+| `selection` | they pick a Good/Better/Best tier | short update to sales |
+| `booking` | they request an assessment slot | hot booking alert |
+| `callback` | they ask an expert to contact them | callback alert |
+| `resend` | they click "email my estimate again" | homeowner copy **only** — never a second lead |
+
+Buying intent is scored server-side out of 120 from system age, timeline, stated reasons,
+financing interest and tier selection, and rendered as a 🔥 rating in the subject line
+alongside UTM / fbclid / gclid attribution.
+
+Extra environment variables beyond the `/api/quote` set:
+
+- `ESTIMATE_TO_EMAIL` — where leads go (falls back to `QUOTE_TO_EMAIL`).
+- `ESTIMATE_SEND_COPY` — set to `0` to stop emailing homeowners their own estimate.
 
 ## Spam filtering
 

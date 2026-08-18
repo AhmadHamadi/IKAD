@@ -119,6 +119,11 @@ R-22 refrigerant has been illegal to import or manufacture in Canada since 2020.
 
 ---
 
+
+## Instant estimate tool
+
+- [Instant HVAC estimate tool](https://ikad.ca/estimate/): interactive estimator that returns installed Good/Better/Best pricing for furnace, AC, heat pump and hybrid replacements from home size, existing equipment, system age and homeowner priorities. Shows monthly financing figures and estimated 2026 Home Renovation Savings rebates. Ranges match the published cost guides on this site; final pricing is confirmed at an in-home assessment.
+
 ## Pricing reference (Halton 2026)
 
 | Service | Range | Notes |

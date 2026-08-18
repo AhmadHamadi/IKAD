@@ -59,6 +59,7 @@ def header(r, active=None):
 <nav class="primary-nav" aria-label="Primary"><ul>
 <li><a href="{r}"{cls('home')}>Home</a></li>
 <li class="has-dropdown"><a href="{r}residential/"{res_active}>Services</a><ul class="dropdown">
+<li><a href="{r}estimate/"{cls('estimate')}><strong>⚡ Instant Estimate</strong></a></li>
 <li><a href="{r}heating-services/">Heating &amp; Furnaces</a></li>
 <li><a href="{r}air-conditioning-heat-pumps/">AC &amp; Heat Pumps</a></li>
 <li><a href="{r}water-heaters/">Water Heaters</a></li>
@@ -85,6 +86,7 @@ def header(r, active=None):
 <li><a href="{r}contact/"{cls('contact')}>Contact</a></li>
 </ul>
 <div class="mobile-extras">
+<a class="btn btn--primary with-icon" href="{r}estimate/">{icon('dollar')} Get Instant Estimate</a>
 <a class="btn btn--primary with-icon" href="{r}contact/">{icon('mail')} Request Free Quote</a>
 <a class="btn btn--secondary with-icon" href="tel:+19054916943">{icon('phone')} (905) 491-6943</a>
 <p class="mobile-extras-info">Mon–Fri 8am–6pm · Sat 9am–4pm<br>Emergency service available 24/7</p>
@@ -106,7 +108,7 @@ def footer(r):
 </div>
 </div>
 <div>
-<h4>HVAC Services</h4>
+<h2>HVAC Services</h2>
 <ul>
 <li><a href="{r}heating-services/">Furnace Installation &amp; Repair</a></li>
 <li><a href="{r}air-conditioning-heat-pumps/">AC &amp; Heat Pumps</a></li>
@@ -120,7 +122,7 @@ def footer(r):
 </ul>
 </div>
 <div>
-<h4>Service Areas</h4>
+<h2>Service Areas</h2>
 <ul>
 <li><a href="{r}service-areas/oakville/">HVAC in Oakville</a></li>
 <li><a href="{r}service-areas/burlington/">HVAC in Burlington</a></li>
@@ -130,8 +132,9 @@ def footer(r):
 <li><a href="{r}service-areas/hamilton/">HVAC in Hamilton</a></li>
 <li><a href="{r}service-areas/brampton/">HVAC in Brampton</a></li>
 </ul>
-<h4 style="margin-top:1.25rem">Resources</h4>
+<h2 style="margin-top:1.25rem">Resources</h2>
 <ul>
+<li><a href="{r}estimate/">Instant HVAC Estimate</a></li>
 <li><a href="{r}blog/">HVAC Blog &amp; Guides</a></li>
 <li><a href="{r}faq/">HVAC FAQ (70+ Answers)</a></li>
 <li><a href="{r}glossary/">HVAC Glossary</a></li>
@@ -142,7 +145,7 @@ def footer(r):
 </ul>
 </div>
 <div>
-<h4>Contact &amp; Hours</h4>
+<h2>Contact &amp; Hours</h2>
 <ul style="list-style:none;padding:0">
 <li style="display:flex;gap:.5rem;align-items:flex-start;padding:.35rem 0">{icon('pin')} <span>2275 Upper Middle Rd E, Suite 101<br>Oakville, ON L6H 0C3</span></li>
 <li style="display:flex;gap:.5rem;align-items:flex-start;padding:.35rem 0">{icon('phone')} <a href="tel:+19054916943">(905) 491-6943</a></li>
@@ -4116,6 +4119,282 @@ def build_blog_hub():
     )
 
 # ---------------------------------------------------------------------------
+# Instant HVAC Estimator
+#
+# One estimator engine (assets/js/estimator.js), several front doors. The
+# canonical /estimate/ page is the indexable one; each campaign variant is a
+# paid-traffic landing page that pre-answers whatever the ad already asked and
+# is marked noindex so it never competes with the canonical page in search.
+# ---------------------------------------------------------------------------
+
+def estimator_floor_monthly():
+    """Lowest honest "from $X/month" figure the estimator can ever display.
+
+    Parsed out of assets/js/estimator.js rather than hardcoded, so an ad
+    headline can never end up contradicting the tool it links to. Mirrors
+    monthlyFrom(): cheapest package low x smallest size factor, amortized.
+    """
+    import re
+    src = (ROOT / "assets/js/estimator.js").read_text(encoding="utf-8")
+    apr = float(re.search(r"apr:\s*([\d.]+)", src).group(1))
+    months = int(re.search(r"months:\s*(\d+)", src).group(1))
+    factors = [float(m) for m in re.findall(r"factor:\s*([\d.]+)", src)]
+    lows = [int(m) for m in re.findall(r"low:\s*(\d+),", src)]
+    price = round(min(lows) * min(factors) / 50) * 50
+    r = apr / 12
+    import math
+    return math.ceil(price * r / (1 - (1 + r) ** -months))
+
+
+ESTIMATOR_CAMPAIGNS = [
+    {
+        "slug": "",
+        "campaign": "general",
+        "eyebrow": "Instant Estimate",
+        "h1": "Get An Instant Estimate For Your New Heating &amp; Cooling System",
+        "lead": "Answer a few quick questions about your home and see real installed pricing, monthly payments and available rebates — in under 60 seconds, before anyone comes to your door.",
+        "title": "Instant HVAC Estimate | Furnace, AC &amp; Heat Pump Pricing | IKAD Mechanical",
+        "description": "Instant installed pricing for a new furnace, AC or heat pump across Halton. Good/Better/Best options, monthly payments and 2026 rebates in 60 seconds.",
+        "noindex": False,
+        "preset": {},
+        "offer": None,
+    },
+    {
+        "slug": "ac-replacement",
+        "campaign": "ac-replacement",
+        "eyebrow": "AC Replacement Estimate",
+        "h1": "How Much Would It Cost To Replace Your AC?",
+        "lead": "If your air conditioner is over 12 years old, you are already paying for it in hydro. Find out what a new system would actually cost — installed, before you book anything.",
+        "title": "AC Replacement Cost Estimate | Instant Pricing | IKAD Mechanical",
+        "description": "See what replacing your air conditioner costs in Halton. Instant installed pricing, monthly payments and rebates for a new AC in Oakville, Burlington and Milton.",
+        "noindex": True,
+        "preset": {"project": "cooling", "replacing": "ac"},
+        "offer": None,
+        "default_source": "meta",
+    },
+    {
+        "slug": "repair-or-replace",
+        "campaign": "repair-or-replace",
+        "eyebrow": "Repair or Replace?",
+        "h1": "Should You Repair Or Replace Your System?",
+        "lead": "The honest answer depends on age, repair history and what is actually going wrong. Answer six questions and we will show you what replacement costs — so you can compare it against that repair quote.",
+        "title": "Repair Or Replace Your Furnace / AC? | Instant Estimate | IKAD",
+        "description": "Deciding between repairing and replacing your furnace or AC in Halton? Get instant replacement pricing so you can compare it against your repair quote.",
+        "noindex": True,
+        "preset": {},
+        "offer": None,
+        "default_source": "meta",
+    },
+    {
+        "slug": "financing",
+        "campaign": "financing",
+        "eyebrow": "0% Financing Available",
+        "h1": "See Your New HVAC System From As Little As ${FLOOR}/Month",
+        "lead": "6 months at 0% — no payments, no interest — then affordable monthly payments. See your exact monthly number for a new furnace, AC or heat pump in under 60 seconds.",
+        "title": "HVAC Financing Estimate | Monthly Payments From IKAD Mechanical",
+        "description": "See monthly payment options for a new furnace, AC or heat pump in Halton. 6 months at 0%, then equal monthly payments on approved credit. Instant estimate.",
+        "noindex": True,
+        "preset": {"financing": "yes"},
+        "offer": None,
+        "default_source": "meta",
+    },
+    {
+        "slug": "free-duct-cleaning",
+        "campaign": "free-duct-cleaning",
+        "eyebrow": "Limited Time Offer",
+        "h1": "Get Your New System + FREE Duct Cleaning",
+        "lead": "Every new heating or cooling system installed by IKAD right now includes a complete duct cleaning at no charge. See your pricing with the offer already applied.",
+        "title": "Free Duct Cleaning With New AC or Furnace | IKAD Mechanical",
+        "description": "Get a free complete duct cleaning with any new furnace, AC or heat pump installed by IKAD Mechanical in Halton. Instant installed pricing with the offer applied.",
+        "noindex": True,
+        "preset": {},
+        "offer": {
+            "id": "free-duct-cleaning",
+            "label": "FREE complete duct cleaning",
+            "bannerLabel": "FREE complete duct cleaning with your installation",
+            "tiers": ["good", "better", "best"],
+        },
+        "default_source": "meta",
+    },
+]
+
+ESTIMATOR_FAQS = [
+    ("How accurate is an instant HVAC estimate?",
+     "It is a real, honest range — not a lowball teaser. The pricing comes from the same numbers in our published <a href=\"/blog/ac-installation-cost-oakville-2026/\">AC cost guide</a> and <a href=\"/blog/furnace-cost-oakville-2026/\">furnace cost guide</a>, adjusted for your home size and the equipment tier you are looking at. What it cannot do is a heat-loss calculation from five questions. Ductwork condition, electrical capacity, venting runs and chimney liners all move the final number, which is why we confirm everything at a free in-home assessment before anything is ordered."),
+    ("Do I have to book an appointment to see the price?",
+     "No. You see all three packages, monthly payments and estimated rebates as soon as you finish the questions. Booking an assessment is a separate step, and it is entirely up to you."),
+    ("Why do you ask for my phone number and address?",
+     "The address lets us confirm which rebate programs apply and whether you are inside our service area. The phone number is how we send your estimate and confirm an appointment time. We ask you to type the number rather than autofill it because a wrong digit is the single most common reason a homeowner never hears back."),
+    ("Is the price installed, or just the equipment?",
+     "Installed. Every number includes the equipment, licensed TSSA-certified installation, removal and disposal of your old system, refrigerant and line connections, electrical, drain work, gas piping and venting where applicable, startup and commissioning, full system testing, the thermostat and warranty registration. Prices are before rebates, and HST is extra."),
+    ("What rebates can I actually get in 2026?",
+     "Ontario's Home Renovation Savings Program is the main one — roughly $1,250 per ton for a cold-climate heat pump up to $7,500, or about $500 per ton on a hybrid setup, plus around $100 for a smart thermostat. A gas furnace on its own generally does not qualify. Our <a href=\"/blog/ontario-heat-pump-rebates-2026/\">2026 Ontario rebate guide</a> walks through the full picture, and we file the paperwork for you either way."),
+    ("How does the financing work?",
+     "We show a representative payment: 6 months at 0% with no payments, then equal monthly instalments amortized over 10 years. The illustration uses the low end of each range. Your actual rate, term and payment are set by the lender when you are approved, so treat the monthly figure as a planning number, not an offer."),
+    ("What if I do not know what equipment I currently have?",
+     "Pick \"I'm not sure\" — it is one of the options for a reason. Roughly a third of homeowners cannot identify their own furnace, and it changes nothing about the estimate you get. We will identify it at the assessment."),
+    ("Do you serve my city?",
+     "We install across Oakville, Burlington, Milton, Halton Hills, Mississauga, Hamilton and Brampton out of our Oakville shop. If you are just outside that list, finish the estimator anyway and we will tell you honestly whether we can get to you."),
+]
+
+
+def build_estimator(c):
+    import json
+
+    floor = str(estimator_floor_monthly())
+    c = {k: (v.replace("{FLOOR}", floor) if isinstance(v, str) else v) for k, v in c.items()}
+
+    slug = c["slug"]
+    depth = 2 if slug else 1
+    r = rel(depth)
+    out = f"estimate/{slug}/index.html" if slug else "estimate/index.html"
+    canonical = f"{BASE}/estimate/{slug}/" if slug else f"{BASE}/estimate/"
+
+    cfg = {
+        "campaign": c["campaign"],
+        "eyebrow": c["eyebrow"],
+        "rel": r,
+        "preset": c.get("preset") or {},
+    }
+    if c.get("offer"):
+        cfg["offer"] = c["offer"]
+    if c.get("default_source"):
+        cfg["defaultSource"] = c["default_source"]
+
+    offer_strip = ""
+    if c.get("offer"):
+        offer_strip = f"""<div style="background:#e30613;color:#fff;text-align:center;padding:.6rem 1rem;font-weight:700;font-size:.95rem">🎁 {c["offer"]["bannerLabel"]}</div>"""
+
+    hero = f"""<section class="section section--dark" id="main" style="padding:3rem 0 2.25rem">
+<div class="container" style="max-width:820px;text-align:center">
+<span class="eyebrow">{c["eyebrow"]}</span>
+<h1 style="margin-bottom:.75rem">{c["h1"]}</h1>
+<p class="lead" style="margin:0 auto 1.5rem">{c["lead"]}</p>
+<div class="hero__badges" style="justify-content:center">
+<span class="hero__badge with-icon">{icon('check')} No phone call required</span>
+<span class="hero__badge with-icon">{icon('check')} Installed pricing, not equipment-only</span>
+<span class="hero__badge with-icon">{icon('check')} 2026 rebates included</span>
+<span class="hero__badge with-icon">{icon('check')} Takes about 60 seconds</span>
+</div>
+</div></section>{offer_strip}"""
+
+    estimator = f"""<section class="est-shell">
+<div class="container">
+<div class="est-card">
+<div id="estimator"></div>
+<div class="est-trust">
+<div><span class="est-trust__num">15+</span><br><span class="est-trust__label">Years installing in Halton</span></div>
+<div><span class="est-trust__num">1,200+</span><br><span class="est-trust__label">Homes &amp; businesses served</span></div>
+<div><span class="est-trust__num">5.0 ★</span><br><span class="est-trust__label">HomeStars &amp; Google rating</span></div>
+<div><span class="est-trust__num">TSSA</span><br><span class="est-trust__label">Gas fitters · ECRA/ESA licensed</span></div>
+</div>
+</div>
+
+<noscript><div class="est-noscript" style="margin-top:1.5rem">
+<h2 style="margin-top:0">The estimator needs JavaScript</h2>
+<p>Your browser has JavaScript turned off, so the interactive estimator cannot run. You can still get exact pricing the direct way — call us at <a href="tel:+19054916943"><strong>(905) 491-6943</strong></a> or <a href="{r}contact/">send us a quote request</a> and we will walk you through the same Good / Better / Best options over the phone.</p>
+<p style="margin-bottom:0">Published pricing is also available in our <a href="{r}blog/ac-installation-cost-oakville-2026/">AC cost guide</a>, <a href="{r}blog/furnace-cost-oakville-2026/">furnace cost guide</a> and <a href="{r}blog/heat-pump-cost-ontario-2026/">heat pump cost guide</a>.</p>
+</div></noscript>
+
+<p class="est-disclaimer"><strong>About this estimate:</strong> pricing is based on the information you provide and reflects typical installed costs across Halton, Peel and Hamilton in 2026. Final equipment selection and installation pricing are confirmed following an assessment of your home — including heat loss, ductwork, electrical capacity and venting. Estimates are before HST and before rebates. Financing figures are illustrative and subject to lender approval.</p>
+</div></section>"""
+
+    how = f"""<section class="section"><div class="container">
+<div class="text-center" style="max-width:760px;margin:0 auto 2.5rem"><span class="eyebrow">How It Works</span><h2>From Question To Quote Without A Sales Call</h2><p class="lead" style="margin:0 auto">Most HVAC companies make you book an appointment before they will say a number. We would rather you knew the range first.</p></div>
+<div class="why-grid">
+<div class="why-card"><span class="why-card__num">1</span><h3>Answer 8 quick questions</h3><p>Home size, what you are replacing, how old it is, what is bothering you and what you care about most. Every one is a single tap.</p></div>
+<div class="why-card"><span class="why-card__num">2</span><h3>See Good / Better / Best</h3><p>Three complete, matched systems with real equipment, installed pricing, monthly payments and the rebates you likely qualify for.</p></div>
+<div class="why-card"><span class="why-card__num">3</span><h3>Compare them properly</h3><p>Side-by-side efficiency, comfort, noise, filtration and warranty — so a higher price makes sense instead of just feeling higher.</p></div>
+<div class="why-card"><span class="why-card__num">4</span><h3>Book only if you want to</h3><p>A complimentary in-home assessment confirms the exact number. If replacing is not the right call yet, we will say so.</p></div>
+</div>
+</div></section>"""
+
+    included = f"""<section class="section section--gray"><div class="container" style="max-width:1000px">
+<div class="text-center" style="max-width:760px;margin:0 auto 2rem"><span class="eyebrow">No Surprises</span><h2>What "Installed" Actually Means At IKAD</h2><p class="lead" style="margin:0 auto">A $5,999 quote from one company and a $6,999 quote from another are rarely the same job. Here is everything folded into our number.</p></div>
+<div class="cost-table-wrap" style="background:#fff;border-radius:10px;padding:1.5rem;border:1px solid #e5e7eb">
+<ul class="est-included">
+<li>Equipment supplied by IKAD</li>
+<li>Licensed, insured, TSSA-certified installation</li>
+<li>Removal and disposal of your old equipment</li>
+<li>Refrigerant, line set connections and evacuation</li>
+<li>Electrical connections and disconnect</li>
+<li>Condensate drain work</li>
+<li>Gas piping and venting where applicable</li>
+<li>Startup, commissioning and airflow verification</li>
+<li>Full system testing before we leave</li>
+<li>Thermostat supplied and configured</li>
+<li>Manufacturer warranty registration filed for you</li>
+<li>IKAD workmanship warranty</li>
+<li>Permits pulled where required</li>
+<li>Rebate paperwork handled on your behalf</li>
+</ul>
+</div>
+{service_areas_inline(r, "Instant estimates available in")}
+</div></section>"""
+
+    testimonials = "".join(
+        f"""<figure class="testimonial">
+<div class="testimonial__stars">{icon('star')}{icon('star')}{icon('star')}{icon('star')}{icon('star')}</div>
+<blockquote class="testimonial__quote">"{t["text"]}"</blockquote>
+<figcaption class="testimonial__author"><span class="testimonial__avatar">{t["initials"]}</span>
+<span><span class="testimonial__name">{t["author"]}</span><span class="testimonial__meta">{t["city"]} · {t["service"]} · {t["source"]}</span></span>
+</figcaption></figure>"""
+        for t in TESTIMONIALS[:3]
+    )
+
+    proof = f"""<section class="section"><div class="container">
+<div class="text-center" style="max-width:720px;margin:0 auto 2.25rem"><span class="eyebrow">Trusted Across The GTA</span><h2>Homeowners Who Went Through This Already</h2><p class="lead" style="margin:0 auto">Family-owned, Oakville-based, and installing across Halton, Peel and Hamilton since 2010.</p></div>
+<div class="testimonials">{testimonials}</div>
+<div class="text-center" style="margin-top:2rem"><a class="btn btn--secondary" href="{r}reviews/">Read All Customer Reviews</a></div>
+</div></section>"""
+
+    body = (
+        hero
+        + estimator
+        + how
+        + included
+        + proof
+        + faq_block(ESTIMATOR_FAQS, "Questions About The Instant Estimator")
+        + cta_banner(r, "Prefer To Just Talk To Someone?",
+                     "Call us and we will walk you through the same options over the phone. No estimator, no forms, no pressure.")
+    )
+
+    extra_head = (
+        f'<link rel="stylesheet" href="{r}assets/css/estimator.css">'
+        f'<link rel="preload" as="script" href="{r}assets/js/estimator.js">'
+    )
+
+    schema = faq_schema(ESTIMATOR_FAQS)
+    if not c["noindex"]:
+        schema += breadcrumb_schema([("Home", f"{BASE}/"), ("Instant Estimate", canonical)])
+        schema += service_schema(
+            "Instant HVAC Estimate",
+            "HVAC installation estimate",
+            canonical,
+            "Instant installed pricing for furnace, air conditioner and heat pump replacement across Halton, Peel and Hamilton.",
+        )
+
+    # The config must be written before the engine loads — the engine reads it at boot.
+    body += (
+        f"\n<script>window.IKAD_ESTIMATOR = {json.dumps(cfg, ensure_ascii=False)};</script>"
+        f'\n<script src="{r}assets/js/estimator.js" defer></script>'
+    )
+
+    page(
+        out=out, depth=depth,
+        title=c["title"],
+        description=c["description"],
+        canonical=canonical,
+        og_image=f"{BASE}/assets/images/services/york-ac-heat-pump.jpg",
+        body=body,
+        extra_head=extra_head,
+        schema_extra=schema,
+        noindex=c["noindex"],
+        active="estimate",
+    )
+
+
+# ---------------------------------------------------------------------------
 # Sitemap & robots
 # ---------------------------------------------------------------------------
 
@@ -4149,6 +4428,8 @@ def build_sitemap():
     urls.append(("reviews/",0.85,"weekly",[hero_team]))
     urls.append(("why-choose-ikad/",0.85,"monthly",[hero_team]))
     urls.append(("blog/",0.7,"weekly",[hero_team]))
+    # Only the canonical estimator is listed; campaign variants are noindex.
+    urls.append(("estimate/",0.9,"monthly",[f"{BASE}/assets/images/services/york-ac-heat-pump.jpg"]))
     for p in BLOG_POSTS:
         urls.append((f"blog/{p['slug']}/",0.7,"monthly",[hero_team, f"{BASE}/assets/images/{p['image']}"]))
 
@@ -4284,6 +4565,8 @@ def main():
     build_blog_hub()
     for p in BLOG_POSTS:
         build_blog_post(p)
+    for c in ESTIMATOR_CAMPAIGNS:
+        build_estimator(c)
     build_thank_you()
     build_privacy()
     build_terms()

@@ -1,6 +1,6 @@
 # robots.txt for IKAD Mechanical Inc.
 # Site: https://ikad.ca/
-# Last updated: 2026-05-21
+# Last updated: 2026-08-18
 
 # ---------------------------------------------------------------
 # Default crawl policy

@@ -200,6 +200,7 @@ Full service area (same-day or next-day, no travel surcharge):
 - [HVAC blog (14 in-depth guides)](https://ikad.ca/blog/)
 - [Our projects](https://ikad.ca/our-projects/)
 - [Contact](https://ikad.ca/contact/)
+- [Instant HVAC estimate tool](https://ikad.ca/estimate/): interactive estimator that returns installed Good/Better/Best pricing for furnace, AC, heat pump and hybrid replacements from home size, existing equipment, system age and homeowner priorities. Shows monthly financing figures and estimated 2026 Home Renovation Savings rebates. Ranges match the published cost guides on this site; final pricing is confirmed at an in-home assessment.
 - [Sitemap (machine-readable)](https://ikad.ca/sitemap.xml)
 - [Deep ingest file](https://ikad.ca/llms-full.txt)
 
