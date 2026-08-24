@@ -25,9 +25,18 @@
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="preconnect" href="https://api.leadconnectorhq.com">
 <link rel="preconnect" href="https://link.msgsndr.com">
+<link rel="preconnect" href="https://stcdn.leadconnectorhq.com">
+<link rel="preconnect" href="https://backend.leadconnectorhq.com">
+<link rel="dns-prefetch" href="https://api.leadconnectorhq.com">
+<link rel="dns-prefetch" href="https://stcdn.leadconnectorhq.com">
 <style>
 .ghl-form-shell{max-width:820px;margin:0 auto;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 24px rgba(15,23,42,.06);padding:1rem}
-.ghl-form-shell iframe{display:block;width:100%;min-height:716px;border:none;border-radius:4px}
+.ghl-form-shell{position:relative}
+.ghl-form-shell iframe{display:block;position:relative;z-index:1;width:100%;min-height:716px;border:none;border-radius:4px;background:transparent}
+.ghl-form-loading{position:absolute;inset:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;color:#64748b;font-size:.92rem;z-index:0}
+.ghl-form-loading__spinner{width:34px;height:34px;border:3px solid #e2e8f0;border-top-color:#e30613;border-radius:50%;animation:ghlspin .8s linear infinite}
+@keyframes ghlspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.ghl-form-loading__spinner{animation:none}}
 .ghl-form-note{max-width:820px;margin:1.25rem auto 0;font-size:.85rem;color:#64748b;line-height:1.7;text-align:center}
 @media (max-width:640px){.ghl-form-shell{padding:.5rem}.ghl-form-shell iframe{min-height:820px}}
 </style>
@@ -73,11 +82,16 @@
 </div>
 </nav>
 <a class="btn btn--primary header-cta" href="../contact/">Free Quote</a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
-<section class="hero hero--compact" id="main"><img class="hero__bg" src="../assets/images/hero/hero-heating-ac.jpg" alt="" loading="eager" fetchpriority="high" width="1920" height="1080">
-<div class="container hero__inner"><span class="eyebrow" style="color:#fca5a5">IKAD Mechanical</span><h1>Send Us Your Details</h1><p>Fill out the short form below and a member of our Oakville team will follow up with you. Prefer to talk now? Call <a href="tel:+19054916943" style="color:#fff;text-decoration:underline">(905) 491-6943</a>.</p></div></section>
+<section class="section section--dark" id="main" style="padding:2.75rem 0 2.25rem">
+<div class="container" style="max-width:820px;text-align:center">
+<span class="eyebrow">IKAD Mechanical</span>
+<h1 style="margin-bottom:.75rem">Send Us Your Details</h1>
+<p class="lead" style="margin:0 auto">Fill out the short form below and a member of our Oakville team will follow up with you. Prefer to talk now? Call <a href="tel:+19054916943" style="color:#fff;text-decoration:underline">(905) 491-6943</a>.</p>
+</div></section>
 <section class="section"><div class="container">
 
 <div class="ghl-form-shell">
+<div class="ghl-form-loading" aria-hidden="true"><span class="ghl-form-loading__spinner"></span><span>Loading your form…</span></div>
 <iframe
   src="https://api.leadconnectorhq.com/widget/form/QUiFmAh4r7eZaxEQKx7J"
   style="width:100%;height:100%;border:none;border-radius:4px"
@@ -94,7 +108,7 @@
   data-layout-iframe-id="inline-QUiFmAh4r7eZaxEQKx7J"
   data-form-id="QUiFmAh4r7eZaxEQKx7J"
   title="Client Review + 1 Year Followup Sequence Form"
-  loading="lazy"></iframe>
+></iframe>
 </div>
 
 <p class="ghl-form-note">Your information is used only to respond to your request. We never sell or share your details. Read our <a href="../privacy-policy/">privacy policy</a>.<br>IKAD Mechanical Inc. · 2275 Upper Middle Rd E, Suite 101, Oakville, ON L6H 0C3 · <a href="tel:+19054916943">(905) 491-6943</a> · <a href="mailto:info@ikad.ca">info@ikad.ca</a></p>
