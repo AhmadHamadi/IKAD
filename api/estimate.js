@@ -9,14 +9,15 @@
 //
 // Every stage carries the same lead_id so the sales inbox threads together.
 //
-// Environment variables (SMTP_* are shared with /api/quote):
-//   SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS      - required
+// Environment variables (transport config is shared with /api/quote):
+//   RESEND_API_KEY, RESEND_FROM                     - preferred transport
+//   SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS      - fallback transport
 //   ESTIMATE_TO_EMAIL   - destination (falls back to QUOTE_TO_EMAIL)
 //   QUOTE_FROM_EMAIL    - sender header
 //   ESTIMATE_SEND_COPY  - "0" to stop emailing the homeowner their estimate
 //   QUOTE_ALLOWED_HOSTS - comma-separated hosts the form may be submitted from
 
-import nodemailer from 'nodemailer';
+import { sendMail, mailerMode } from './_mailer.js';
 import { scoreSubmission, recordHit, FLAG_THRESHOLD } from './_spam.js';
 
 const TO_EMAIL = process.env.ESTIMATE_TO_EMAIL || process.env.QUOTE_TO_EMAIL || 'Saifsabeeh.31@gmail.com';
@@ -233,23 +234,13 @@ export default async function handler(req, res) {
 
   /* ---------------- Send ---------------- */
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-    console.error('[estimate] SMTP env vars missing — lead logged only', {
+  if (mailerMode() === 'none') {
+    console.error('[estimate] no mail transport configured — lead logged only', {
       leadId, name, phone, email, city, address, answers, stage,
     });
     return res.status(500).json({ ok: false, error: `Email service unavailable. Please call ${PHONE}.` });
   }
 
-  const port = Number(SMTP_PORT);
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port,
-    secure: port === 465,
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  });
-
-  const fromHeader = process.env.QUOTE_FROM_EMAIL || `IKAD Mechanical <${SMTP_USER}>`;
   const flagged = verdict.isSpam;
   const flames = '🔥'.repeat(lead.flames);
 
@@ -326,8 +317,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ ok: false, error: 'Nothing to resend.' });
     }
     try {
-      await transporter.sendMail({
-        from: fromHeader,
+      await sendMail({
         to: email,
         replyTo: process.env.QUOTE_TO_EMAIL || 'info@ikad.ca',
         subject: `Your IKAD system estimate — ${system.label || 'HVAC'}`,
@@ -342,8 +332,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    await transporter.sendMail({
-      from: fromHeader,
+    await sendMail({
       to: TO_EMAIL,
       replyTo: email,
       subject,
@@ -358,15 +347,14 @@ export default async function handler(req, res) {
       },
     });
   } catch (err) {
-    console.error('[estimate] SMTP send error:', err);
+    console.error('[estimate] mail send error:', err);
     return res.status(502).json({ ok: false, error: `Email could not be sent. Please call ${PHONE}.` });
   }
 
   // Homeowner copy — only on the first stage, and never to a flagged lead.
   if (stage === 'estimate' && SEND_COPY && !flagged && packages.length) {
     try {
-      await transporter.sendMail({
-        from: fromHeader,
+      await sendMail({
         to: email,
         replyTo: process.env.QUOTE_TO_EMAIL || 'info@ikad.ca',
         subject: `Your IKAD system estimate — ${system.label || 'HVAC'}`,

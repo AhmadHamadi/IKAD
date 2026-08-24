@@ -1,16 +1,16 @@
 // Vercel serverless function: POST /api/quote
-// Receives quote-request form submissions, spam-scores them, and emails them
-// via SMTP (nodemailer).
+// Receives quote-request form submissions, spam-scores them, and emails them.
+// Delivery is handled by ./_mailer.js — Resend when RESEND_API_KEY is set,
+// otherwise SMTP. This file decides what the email says, not how it is sent.
 //
 // Required environment variables (set in Vercel project settings AND in local .env):
-//   SMTP_HOST   - e.g. mail.clinimedia.ca
-//   SMTP_PORT   - e.g. 465 (SSL) or 587 (STARTTLS)
-//   SMTP_USER   - SMTP login user (the address that will appear in From if QUOTE_FROM_EMAIL is unset)
-//   SMTP_PASS   - SMTP password
+//   RESEND_API_KEY - Resend API key (preferred transport)
+//   RESEND_FROM    - verified Resend sender
+//   SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS - fallback transport
 //
 // Optional environment variables (with sensible defaults):
 //   QUOTE_TO_EMAIL         - destination address
-//   QUOTE_FROM_EMAIL       - sender header (default: "IKAD Mechanical <SMTP_USER>")
+//   QUOTE_FROM_EMAIL       - sender header for the SMTP path only
 //   QUOTE_SUBJECT_PREFIX   - subject prefix for clean leads (default: [IKAD Quote])
 //   QUOTE_SPAM_SUBJECT_TAG - subject prefix for flagged leads (default: [SPAM?])
 //   QUOTE_SPAM_TO_EMAIL    - if set, blocked (obvious) spam is copied here instead of dropped
@@ -18,7 +18,7 @@
 //   QUOTE_SPAM_BLOCK_SCORE - score at which a lead is never emailed (default 12)
 //   QUOTE_ALLOWED_HOSTS    - comma-separated hosts the form may be submitted from
 
-import nodemailer from 'nodemailer';
+import { sendMail, mailerMode } from './_mailer.js';
 import { scoreSubmission, recordHit, FLAG_THRESHOLD, BLOCK_THRESHOLD } from './_spam.js';
 
 const TO_EMAIL = process.env.QUOTE_TO_EMAIL || 'Saifsabeeh.31@gmail.com';
@@ -108,21 +108,11 @@ export default async function handler(req, res) {
 
   /* ---------------- Send ---------------- */
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-    console.error('SMTP env vars missing — set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS');
+  if (mailerMode() === 'none') {
+    console.error('No mail transport configured — set RESEND_API_KEY, or SMTP_HOST/PORT/USER/PASS');
     return res.status(500).json({ ok: false, error: 'Email service unavailable. Please call (905) 491-6943.' });
   }
 
-  const port = Number(SMTP_PORT);
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port,
-    secure: port === 465, // 465 = implicit TLS; 587 / others = STARTTLS
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  });
-
-  const fromHeader = process.env.QUOTE_FROM_EMAIL || `IKAD Mechanical <${SMTP_USER}>`;
   const flagged = verdict.isSpam;
   const prefix = flagged ? `${SPAM_TAG} ${SUBJECT_PREFIX}` : SUBJECT_PREFIX;
   const subject = `${prefix} ${service || 'New quote'} — ${name}${city ? ' (' + city + ')' : ''}`;
@@ -187,8 +177,7 @@ export default async function handler(req, res) {
   `;
 
   try {
-    const info = await transporter.sendMail({
-      from: fromHeader,
+    const info = await sendMail({
       to: verdict.isBlocked && spamToEmail ? spamToEmail : TO_EMAIL,
       replyTo: email,
       subject,
@@ -206,7 +195,7 @@ export default async function handler(req, res) {
     }
     return res.status(200).json({ ok: true, id: info.messageId });
   } catch (err) {
-    console.error('SMTP send error:', err);
+    console.error('Mail send error:', err);
     return res.status(502).json({ ok: false, error: 'Email could not be sent. Please call (905) 491-6943.' });
   }
 }
