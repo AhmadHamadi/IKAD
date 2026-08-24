@@ -41,3 +41,6 @@ desktop.ini
 *.log
 *.tmp
 *.bak
+
+# Resend API key — never commit
+RESEND-API-KEY.txt
