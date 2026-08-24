@@ -188,6 +188,21 @@
 </nav>
 <script src="https://link.msgsndr.com/js/form_embed.js" defer></script>
 <script src="../assets/js/main.js"></script>
+<script>
+/* The GHL iframe paints transparent, so the loading placeholder behind it
+   stays visible through the form. Drop it as soon as the iframe loads. */
+(function () {
+  document.querySelectorAll('.ghl-shell iframe, .ghl-form-shell iframe').forEach(function (f) {
+    var hide = function () {
+      var el = f.parentNode.querySelector('.ghl-loading, .ghl-form-loading');
+      if (el) el.style.display = 'none';
+    };
+    if (f.complete) hide();
+    f.addEventListener('load', hide);
+    setTimeout(hide, 12000); // never leave it stuck if load never fires
+  });
+})();
+</script>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

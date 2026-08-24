@@ -11,18 +11,22 @@
 // right sender automatically.
 //
 // Environment variables:
-//   RESEND_API_KEY - Resend API key. Its presence is what enables Resend.
-//   RESEND_FROM    - verified sender (default: IKAD Mechanical <info@tradeleadsmarketing.com>)
+//   RESEND_API_KEY - Resend API key, set in the Vercel project settings. Its
+//                    presence is what enables Resend. Never hardcode it here:
+//                    this repository is public.
+//   RESEND_FROM    - verified sender (default below)
 //   SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASS - fallback transport
 //   QUOTE_FROM_EMAIL - From header for the SMTP path only (unchanged behaviour)
 
 import nodemailer from 'nodemailer';
 
 const RESEND_ENDPOINT = 'https://api.resend.com/emails';
+
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const RESEND_FROM_DEFAULT = 'IKAD Mechanical <info@tradeleadsmarketing.com>';
 
 export function resendConfigured() {
-  return Boolean(process.env.RESEND_API_KEY);
+  return Boolean(RESEND_API_KEY);
 }
 
 export function smtpConfigured() {
@@ -59,7 +63,7 @@ async function sendViaResend({ to, replyTo, subject, text, html, headers }) {
   const res = await fetch(RESEND_ENDPOINT, {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      Authorization: `Bearer ${RESEND_API_KEY}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(payload),
